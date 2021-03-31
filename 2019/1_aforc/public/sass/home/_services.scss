@@ -1,0 +1,138 @@
+.services {
+    grid-column: full-start / full end;
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    // background-color: red;
+
+    @include respond(1000) {
+        grid-template-rows: repeat(8, 7vw);
+    }
+
+    & > * {
+        width: 100%;
+    }
+
+    &__item {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        &--1 {
+            grid-column: 2 / span 3;
+            grid-row: 2 / span 2;
+            // background-color: red;
+
+            display: flex;
+            justify-content: center;
+
+            &-box {
+                width: 30%;
+                height: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                overflow: hidden;
+
+                @include respond(1000) {
+                    width: 45%;
+                }
+            }
+        }
+
+        &--2 {
+            grid-column: 2 / span 3;
+            grid-row: 5 / span 2;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            @include respond(1000) {
+                grid-column: 1 / span 5;
+            }
+        }
+    }
+
+    // THE BOX
+    &__bars {
+        fill: none;
+        stroke: $black;
+        stroke-width: 0.25%;
+        height: 100%;
+        z-index: 5;
+    }
+
+    &__title {
+        color: $hero;
+        font-size: 1.7vw;
+        font-weight: 700;
+        z-index: 5;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include respond(1000) {
+            font-size: 2.5vw;
+        }
+    }
+
+    &__paint {
+        width: 100%;
+        right: 120%;
+        z-index: 0; 
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition-paint;  
+
+        &--show {
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    // THE TITLE BENEATH
+    &__heading {
+        font-family: $roboto;
+        color: $grey;
+        font-size: 1.85vw;
+        font-weight: 300;
+        font-style: italic;
+        z-index: 5;
+
+        @include respond(1000) {
+            font-size: 2.25vw;
+        }
+    }
+
+    &__waterdrop {
+
+        &--1 {
+            height: 7vw;
+            left: 1%;
+            top: 43%;
+            transform: translate(-50%, -50%) scale(0); 
+            transition: ease-in 3s;
+        }
+        &--2 {
+            height: 1.5vw;
+            left: 9%;
+            top: 66%;
+            transform: translate(-50%, -50%) scale(0); 
+            transition: ease-in 1.5s 1s;
+        }
+        &--3 {
+            height: 1vw;
+            left: 6%;
+            top: 60%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: ease-in 2s 2.5s; 
+        }
+        &--animation {
+            transform: translate(-50%, -50%) scale(1); 
+        }
+    }
+}

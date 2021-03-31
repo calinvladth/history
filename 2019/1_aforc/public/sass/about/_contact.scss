@@ -1,0 +1,129 @@
+.about-contact {
+    grid-column: full start / full end;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    
+    & > * {
+        width: 100%;
+    }
+
+    &__item {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 10;
+
+        &--1 {
+            grid-column: 1 / span 8;
+            grid-row: 1 / span 8;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &--2 {
+            grid-column: 9 / span 9;
+            grid-row: 1 / span 8;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            &-title {
+                width: 80%;
+
+                @include respond(700) {
+                    width: 100%;
+                }
+            }
+
+            &-form {
+                left: 7%;
+                height: 65%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+        }
+
+    }
+
+    &__img {
+        height: 90%;
+        margin-top: 10%;
+        // width: 100%;
+    }
+
+    &__title {
+        font-size: 1.4vw;
+
+        @include respond(700) {
+            font-size: 1.75vw;
+        }
+    }
+
+    &__input {
+        font-family: $roboto;
+        font-weight: 300;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 50%;
+        border-bottom: .15rem solid $grey-dark;
+
+        color: $grey-dark;
+        font-size: 1.4vw;
+        padding: 2% 0;
+
+        @include respond(700) {
+            font-size: 1.75vw;
+        }
+
+        &:focus {
+            border-color: darken($grey-dark, 5%);
+            color: $black;
+        }
+    }
+
+    &__textarea {
+        width: 80%;
+    }
+
+    &__button {
+        font-family: $roboto;
+        margin-top: 5%;
+        border: none;
+        outline: none;
+        font-size: .95vw;
+        font-weight: 700;
+        color: $hero;
+        background-color: $grey-dark;
+        padding: 0 1vw;
+        height: 4vw;
+        width: 10vw;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        @include respond(700) {
+            font-size: 1.2vw;
+        }
+
+        &--img {
+            fill: $hero;
+            width: 2vw;
+            height: 2vw;
+
+            @include respond(700) {
+                width: 2.35vw;
+                height: 2.35vw;
+            }
+        }
+    }
+}

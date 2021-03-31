@@ -1,0 +1,30 @@
+@import 'mixins';
+@import "components"; 
+@import "base"; 
+@import 'layout';
+ 
+
+@import "home/navigation";
+@import "home/hero"; 
+@import "home/about"; 
+@import "home/services";  
+@import "home/services-extra";  
+@import "home/portofolio";   
+@import "home/portofoliogrid";   
+@import "home/chat";   
+@import "home/brand";  
+
+@import "about/header";  
+@import "about/about-us";  
+@import "about/contact";  
+ 
+@import "landing/landing.scss"; 
+
+@import "services/services-hero.scss"; 
+@import "services/design.scss"; 
+@import "services/branding.scss"; 
+@import "services/develop.scss"; 
+@import "services/popup.scss";  
+  
+@import "footer/footer.scss"
+

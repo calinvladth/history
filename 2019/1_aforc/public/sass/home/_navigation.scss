@@ -1,0 +1,72 @@
+.header {
+    background-color: $black;
+    transition: ease-in-out .4s; 
+
+    grid-column: full-start / full end;
+    display: grid;
+
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 5vw);
+    position: relative;
+    margin-top: -15vw;
+    
+
+    & > * {
+        width: 100%;
+    }
+
+    &__item {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+        &--1 {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+        }
+
+        &--2 {
+            grid-column: 9 / span 2;
+            grid-row: 1 / span 2;
+        }
+
+        &--3 {
+            grid-column: 3 / span 6;
+            grid-row: 3;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-start;
+
+            @include respond(1000) {
+                grid-column: 2 / span 8;
+            }
+        }
+
+    }
+    &__link {
+        font-size: 1.25vw;
+        text-transform: uppercase;
+        color: $grey;
+
+        @include respond(1000) {
+            font-size: 1.75vw;
+        }
+
+        &:hover {
+            text-shadow: 0 0 .5rem rgba($neon, 1);
+        }
+        &:active {
+            text-shadow: 0 0 .5rem rgba($red, 1)
+        }
+    }
+}
+ 
+.header--open {
+    transition: ease-in-out .4s;
+    margin-top: 0;
+}
+
+.header--active {
+    text-shadow: 0 0 .5rem rgba($neon, 1);
+}

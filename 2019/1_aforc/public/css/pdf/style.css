@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden; }
+
+.pdf {
+  display: grid;
+  grid-column: full start / full end;
+  grid-template-columns: repeat(2, 1fr); }
+  .pdf > * {
+    width: 100%; }
+  .pdf__item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+    .pdf__item--1 {
+      grid-column: 1 / span 2;
+      position: relative; }
+  .pdf__img {
+    width: 100%; }

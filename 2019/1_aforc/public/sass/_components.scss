@@ -1,0 +1,93 @@
+// FONTS
+$roboto: 'Roboto', sans-serif;
+$forum: 'Forum', cursive;  
+$montserrat : 'Montserrat', sans-serif;
+
+// COLORS
+$black: #1B1B1D;
+$dark: #113743;
+$red: #C50909;
+$cherry: #DB2E17;
+$grey: #AAA4A5;
+$grey-dark: rgb(119, 119, 119);
+$hero: #EEEEEE;
+$newhero: #FEFEFE;
+$light: #E5E4DC;
+$neon: #07CFF6;
+
+//SVG COLORS
+.svg--white {
+    fill: $hero;
+}
+
+//TRANSITIONS
+$transition-paint: ease-in-out .8s;   
+
+// CLASS
+// POSITIONS
+.relative {position: relative;}
+.absolute {position: absolute;}
+.pointer {cursor:pointer;}
+
+
+// PARAGRAPHS
+
+.paragraph {
+    font-size: 1.6rem;
+    color: $hero;
+}
+
+//IMAGES IN BOXES
+.full {
+    width: 100%;
+    height: 100%;
+}
+
+// TEXT
+// CENTER ALIGN
+.text--center {
+    text-align: center;
+}
+
+//TRIGGER
+.trigger {
+    width: 1rem;
+    height: 1rem; 
+    background-color: transparent;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    &--upper {
+        top: -25vh;
+        @include respond(1000) {
+            top: -50vh;  
+        }
+        
+    }
+
+    &--lower {
+        top: -24vh;
+    }
+
+    &--normal {
+        top: 0;
+    }
+
+    &--uppest {
+        top: -50vh;
+    }
+
+    &--lowest {
+        bottom: -25vh;
+    }
+}
+
+//MORE LINK
+.more--link {
+    font-size: 1.5rem;
+    color: inherit;
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: inherit;
+}

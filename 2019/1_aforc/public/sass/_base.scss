@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: $hero;
+}
+
+h1, 
+h3{
+    font-family: $forum; 
+    font-weight: 400;
+}
+
+p {
+    font-family: $roboto;
+}
+
+a {
+    font-family: $roboto; 
+    text-decoration: none;
+    color: inherit;
+}
+
+// .input:-webkit-autofill,
+// .input:-webkit-autofill:hover, 
+// .input:-webkit-autofill:focus
+// .textarea:-webkit-autofill,
+// .textarea:-webkit-autofill:hover
+// .textarea:-webkit-autofill:focus,
+// .select:-webkit-autofill,
+// .select:-webkit-autofill:hover,
+// .select:-webkit-autofill:focus {
+//     transition: 5000s ease-in
+    
+// }

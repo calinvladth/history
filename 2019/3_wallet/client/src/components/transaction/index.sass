@@ -1,0 +1,48 @@
+@import '../../assets/style/variables'
+
+.buttons
+    max-width: $width
+    height: 100px
+    margin: 10px auto
+
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+
+    @include lg
+        width: $tab_width
+
+    &__button
+        border: none
+        outline: none
+        background-color: transparent
+        color: $white
+        font-weight: 700
+
+        height: 100px
+        width: 45%
+        background-color: $wood_dark
+        font-size: 20px
+
+        border-radius: 10px
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        transition: all .2s
+
+        @include lg
+            width: 49%
+            font-size: 25px
+
+        &:active, &:hover
+            background-color: darken($wood_dark, 5%)
+
+        &--icon
+            max-height: 22.5%
+            margin-left: 5%
+
+            @include md
+                display: none

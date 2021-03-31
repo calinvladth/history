@@ -1,0 +1,90 @@
+@import '../../assets/style/variables'
+
+.activity
+    width: $width
+    height: auto
+    margin: 10px auto
+    background-color: $white
+
+    color: $wood_light
+
+    border-radius: $border_radius_box
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    padding: 50px 2.5%
+
+    @include lg
+        width: $tab_width
+
+    @include md
+        overflow-x: scroll
+
+    &__title
+        margin: 50px auto
+
+
+.empty
+    width: 100%
+    height: 100%
+    background-color: $white
+
+//Button
+//    &:nth-child(1)
+//        margin-right: 5%
+
+.actionButton
+    margin-left: 5%
+
+Table
+    table-layout: auto
+
+
+.removeStyle
+    &__title
+        color: #666666
+        font-weight: 400
+
+    &__detail
+        color: #ff311f
+
+.paginationBox
+    width: 100%
+    height: auto
+    margin-top: 20px
+
+    display: flex
+    justify-content: center
+    //background-color: rgba(green, .3)
+
+.table-striped tbody tr:nth-of-type(odd)
+    background-color: $wood_light !important
+
+thead
+    color: $wood_light
+
+.tableText
+    white-space: pre
+
+.noTransaction
+    width: 100%
+
+    color: $wood_dark
+
+    @include lg
+        width: $tab_width
+
+    &__title
+        font-size: $title__normal
+
+        @include lg
+            font-size: $tab__title__normal
+
+    &__subtitle
+        font-size: $subtitle__normal
+
+        @include lg
+            font-size: $tab__subtitle__normal

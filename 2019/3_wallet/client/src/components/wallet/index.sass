@@ -1,0 +1,56 @@
+@import '../../assets/style/variables'
+.wallet
+    height: 500px
+    max-width: $width
+    margin: 0 auto
+    background-color: $wood_light
+
+    border-radius: $border_radius_box
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    @include lg
+        width: $tab_width
+        min-height: 550px
+
+
+
+    &__icon
+        margin-bottom: 25px
+        width: 250px
+
+        @include lg
+            width: 300px
+
+        @include md
+            width: 225px
+
+
+    &__account
+        font-size: 35px
+        color: $white
+
+        @include lg
+            font-size: 45px
+
+        @include md
+            font-size: 40px
+
+
+
+
+
+.brokenWallet
+    margin-left: 45px
+    width: 275px
+
+    transform: rotate(-10deg)
+
+    @include lg
+            width: 325px
+
+    @include md
+        max-width: 250px

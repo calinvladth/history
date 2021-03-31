@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "productId": 1,
+      "name": "Something plastics",
+      "category": "plastics",
+      "price": "10",
+      "adminId": 2,
+      "created": "2019-07-05T15:43:05.000Z",
+      "updated": "2019-07-05T15:43:05.000Z"
+    },
+    {
+      "productId": 2,
+      "name": "Something bio",
+      "category": "bio",
+      "price": "10",
+      "adminId": 2,
+      "created": "2019-07-05T15:43:27.000Z",
+      "updated": "2019-07-05T15:43:27.000Z"
+    },{
+      "productId": 1,
+      "name": "Something plastics",
+      "category": "plastics",
+      "price": "30",
+      "adminId": 2,
+      "created": "2019-07-05T15:43:05.000Z",
+      "updated": "2019-07-05T15:43:05.000Z"
+    },
+    {
+      "productId": 2,
+      "name": "Something bio",
+      "category": "bio",
+      "price": "23.97",
+      "adminId": 2,
+      "created": "2019-07-05T15:43:27.000Z",
+      "updated": "2019-07-05T15:43:27.000Z"
+    }
+  ]
+}

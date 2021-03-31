@@ -1,0 +1,37 @@
+@import '../../assets/style/variables'
+
+.footerBox
+    width: 100%
+    min-height: 200px
+    height: auto
+    margin: 0 auto
+    padding: 2.5% 1.5%
+
+    background-color: $wood_dark
+
+    &__title
+        display: inline-block
+        padding-bottom: 3px
+        margin-bottom: 25px
+        border-bottom: 1px solid white
+
+    &__content
+        width: $width
+        margin: 0 auto
+        color: $white
+        text-align: left
+
+        @include lg
+            width: $tab_width
+
+            padding: 2.5% 5%
+
+        @include md
+            padding: 5% 5%
+
+        p
+            margin: 0
+
+.buttonContact
+    background-color: $redish !important
+    border-color: $redish !important

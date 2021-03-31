@@ -1,0 +1,32 @@
+@import '../../assets/style/variables'
+.noUserComponent
+    width: 100%
+    min-height: 500px
+    margin: 0 auto
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    color: $white
+
+    @include lg
+        height: 80vh
+        max-height: 600px
+
+    @include md
+        max-height: 500px
+
+    &__title
+        font-weight: 400
+        font-size: $title__big
+
+        @include md
+            font-size: $tab__title__big
+
+    &__subtitle
+        font-size: $subtitle__big
+
+        @include md
+            font-size: $tab__subtitle__big

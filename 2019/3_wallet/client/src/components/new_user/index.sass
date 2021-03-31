@@ -1,0 +1,32 @@
+@import '../../assets/style/variables'
+
+.freshUserBox
+    width: $width
+    min-height: 150px
+
+    margin: 10px auto
+    padding: 50px 0
+    border-radius: $border_radius_box
+    background-color: $white
+    color: $wood_dark
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    @include lg
+        width: $tab_width
+
+    &__title
+        font-size: $title__normal
+
+        @include lg
+            font-size: $tab__title__normal
+
+    &__subtitle
+        font-size: $subtitle__normal
+
+        @include lg
+            font-size: $tab__subtitle__normal
+

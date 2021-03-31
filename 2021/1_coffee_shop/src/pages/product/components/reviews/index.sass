@@ -1,0 +1,143 @@
+@import '../../../../assets/style/index'
+
+.reviewsProductComponent
+    $contentbox1_width: 120px
+    $avatarbox_size: calc(#{$contentbox1_width} / 1.6)
+    $stars_size: 22px
+
+    width: 100%
+    height: auto
+    color: $black
+
+    &__reviewsnumberbox
+        text-align: left
+        margin-bottom: 20px
+
+        > p
+            font-size: 15px
+
+    &__reviewbox
+        width: 100%
+
+        display: flex
+        justify-content: center
+        align-items: flex-start
+
+        &--contentbox
+            padding-bottom: 25px
+
+            &:nth-child(1)
+                width: $contentbox1_width
+
+                display: flex
+                justify-content: flex-start
+                align-items: flex-start
+
+            &:nth-child(2)
+                width: 100%
+
+    &__avatarbox
+        width: $avatarbox_size
+        height: $avatarbox_size
+
+        border-radius: 50%
+
+        background-color: rgba(red, .2)
+
+    &__starsbox
+        font-size: $stars_size
+
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+    &__namebox
+        margin-top: 10px
+        line-height: 25px
+
+        > h3
+            font-size: 25px
+
+    &__datebox
+        > p
+            font-size: 15px
+
+    &__messagebox
+        margin-top: 10px
+
+        > p
+            font-size: 16px
+
+
+    &__reviewformbox
+        width: 100%
+
+        padding-top: 25px
+
+        &--details
+            width: 100%
+            padding-bottom: 20px
+
+            > p
+                letter-spacing: 3px
+                font-size: 16px
+
+                > span
+                    color: red
+
+    &__formbox
+        width: 100%
+
+        &--starratingbox
+            width: 100%
+            font-size: $stars_size
+
+            padding-bottom: 20px
+
+            display: flex
+            justify-content: flex-start
+            align-items: center
+
+            > label
+                font-size: 15px
+                padding-right: 15px
+
+        &--textarea
+            width: 100%
+
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+
+            > label
+                font-size: 15px
+                margin-bottom: 5px
+
+            > textarea
+                width: 55%
+                height: 250px
+
+        &--input
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+
+            > label
+                font-size: 15px
+                margin-bottom: 5px
+
+            > input
+                width: 55%
+                height: 75px
+
+            &-padding
+                padding: 25px 0
+
+        &--buttonbox
+            margin-top: 50px
+
+
+
+

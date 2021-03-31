@@ -1,0 +1,40 @@
+@import '../../../../assets/style/index'
+
+.title
+    background-color: $white
+    display: flex
+    justify-content: center
+    align-items: center
+
+    position: relative
+
+    > span
+        width: 100%
+        height: 2px
+
+        position: absolute
+
+        &:before
+            content: ''
+            width: 100vw
+            height: 100%
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            background-color: $gold
+
+    > div
+        background-color: $white
+        padding: 0 10px
+        position: relative
+
+        z-index: 500
+
+
+        > h1
+            font-size: 30px
+            padding-left: 10px
+
+            position: relative
+            z-index: 500

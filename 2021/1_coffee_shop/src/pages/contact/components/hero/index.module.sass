@@ -1,0 +1,40 @@
+@import "../../../../assets/style/index"
+
+.box
+    width: 100%
+    min-height: 400px
+    height: 70vh
+
+    background-color: $gold
+
+
+.content
+    width: 100%
+    max-width: $standard_max_width
+    height: 100%
+    margin: 0 auto
+
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    @include md
+        justify-content: center
+
+
+.contentTitle
+    $margin: 100px
+    margin: calc(#{$margin} / 2) 0 0 $margin
+
+    @include md
+        width: 100%
+        margin: 0
+        text-align: center
+
+        background-color: rgba($black, .2)
+        color: $white
+
+
+    > h1
+        font-size: 4.5rem
+        padding: 1rem

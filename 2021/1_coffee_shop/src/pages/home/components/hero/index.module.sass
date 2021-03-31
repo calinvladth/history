@@ -1,0 +1,152 @@
+@import "../../../../assets/style/index"
+
+.box
+    $box_width: calc(#{$standard_max_width} / 2)
+
+    width: 100%
+    min-height: 100vh
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    padding: 5rem 0
+
+.boxContent
+    width: 100%
+    max-width: $standard_max_width
+    margin-top: 10rem
+
+    display: grid
+    grid-template-columns: 50% auto
+
+    @include md
+        grid-template-columns: 1fr auto
+
+    @include sm
+        grid-template-columns: 1fr
+
+    > div
+        width: 100%
+
+.detail
+    min-height: 40rem
+
+.detailTitle
+    width: 100%
+    text-align: start
+    position: relative
+
+    &:before
+        content: ''
+        width: 100vw
+        height: 100%
+        position: absolute
+        top: 0
+        right: 11%
+        border-bottom: .2rem solid $gold
+
+        @include sm
+            right: 50%
+            transform: translateX(50%)
+
+    > h1
+        color: $gold
+        @include md
+            padding: 0 1rem
+            text-indent: 0
+
+.detailText
+    margin-top: 2rem
+
+    @include md
+        padding: 0 1rem
+        background-color: rgba($black, .3)
+        margin-right: 11%
+
+    @include sm
+        margin-right: 0
+
+
+.detailSubtitle
+    width: 100%
+    padding-bottom: 1.25rem
+
+    > h3
+        @include md
+            color: $white
+            text-indent: 0
+
+.detailParagraph
+    width: 100%
+    text-align: start
+    padding-right: 5rem
+
+    > p
+        color: $white
+
+
+.detailAction
+    width: 45rem
+
+    display: flex
+    justify-content: space-between
+
+    margin-top: 7.5rem
+
+    @include md
+        width: 100%
+        padding-left: 1rem
+
+.social
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+    @include sm
+        justify-content: flex-start
+
+.socialBox
+    width: 5rem
+
+    @include sm
+        margin-left: 1rem
+        margin-top: 2.5rem
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        > div
+            width: 100%
+            margin-left: 1rem
+
+            &:nth-child(1)
+                margin-left: 0
+
+.socialBoxIcon
+    $social_size: 3.5rem
+    width: $social_size
+    height: $social_size
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    cursor: pointer
+
+    > span
+        font-size: clamp(2rem, 1.1vw, 2.25rem)
+        font-weight: 700
+        color: $white
+
+        &:hover
+            color: $gold
+
+
+
+
+
+
+
+
+

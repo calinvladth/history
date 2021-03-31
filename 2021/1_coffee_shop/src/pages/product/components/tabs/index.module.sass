@@ -1,0 +1,44 @@
+@import '../../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+    color: $black
+
+.titlebox
+    width: 100%
+    height: 5rem
+
+    display: flex
+    justify-content: center
+    align-items: flex-start
+
+.titleboxTitle
+    width: 50%
+    height: 100%
+
+    background-color: $grey
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    > h1
+        font-size: 2.5rem
+
+    @include md
+        width: 100%
+
+
+.titleboxTitleActive
+    background-color: $gold
+
+.component
+    width: 100%
+    height: auto
+    padding: 5rem
+
+    border: .2rem solid $grey
+
+    @include md
+        padding: 5rem 1rem

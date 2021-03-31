@@ -1,0 +1,37 @@
+@import '../../../../assets/style/index'
+
+$image_size: 130px
+$image_grid: 7.5px
+$contentbox_height: calc(#{$image_size} * 2 + #{$image_grid} * 4)
+$full_width: calc((#{$image_size} + (#{$image_grid} * 2)) * 3)
+
+
+.box
+    width: $full_width
+    text-align: left
+    padding-top: 40px
+
+    > h1
+        font-size: 25px
+        padding-left: $image_grid
+
+.content
+    width: 100%
+    height: $contentbox_height
+
+    margin-top: 10px
+
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: flex-start
+
+    overflow: hidden
+
+.contentImage
+    width: $image_size
+    height: $image_size
+    margin: $image_grid
+
+    &:hover
+        cursor: pointer

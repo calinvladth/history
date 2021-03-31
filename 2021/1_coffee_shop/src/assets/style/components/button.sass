@@ -1,0 +1,37 @@
+.button
+    $border_size: 1px
+    cursor: pointer
+    border: $border_size solid transparent
+    background-color: transparent
+    color: $black
+
+    outline: none
+
+    border-radius: 5px
+
+    font-size: clamp(1.6rem, 1vw, 1.8rem)
+    font-family: $font-main
+    text-transform: capitalize
+    font-weight: 400
+
+    min-width: 200px
+    min-height: 50px
+    padding: 10px 25px
+
+    &:focus,
+    &::-moz-focus-inner
+        outline: none
+        border: $border_size solid transparent
+
+    &--full
+        background-color: $gold
+
+    &--border
+        border-color: $gold
+
+        &:focus
+            border-color: $gold
+
+    &--long
+        width: 100%
+

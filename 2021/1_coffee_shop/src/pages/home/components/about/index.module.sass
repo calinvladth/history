@@ -1,0 +1,98 @@
+@import '../../../../assets/style/index'
+
+$min-height: 40rem
+
+.box
+    width: 100%
+    max-width: $standard_max_width
+    height: auto
+
+    margin: 0 auto
+
+.content
+    width: 100%
+    min-height: $min-height
+    padding-top: 7.5rem
+
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+    @include sm
+        grid-template-columns: 1fr
+
+
+    &:nth-child(1)
+        padding: 0
+
+    > div
+        width: 100%
+
+.imageLeft
+    margin-left: 0 !important
+
+.imageRight
+    margin-right: 0 !important
+
+.contentImage
+    width: 47.5%
+    height: $min-height
+
+    position: relative
+
+    @include sm
+        display: none
+
+    > img
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        max-width: 100%
+        max-height: 100%
+        margin: auto
+
+
+.contentDescription
+    width: 52.5%
+    height: 100%
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+.contentDescriptionTitleRight
+    text-align: center
+    position: relative
+
+    &:before
+        content: ''
+        width: 100vw
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        border-bottom: .2rem solid $gold
+
+.contentDescriptionTitleLeft
+    text-align: center
+    position: relative
+
+    &:before
+        content: ''
+        width: 100vw
+        height: 100%
+        position: absolute
+        top: 0
+        right: 0
+        border-bottom: .2rem solid $gold
+
+.contentDescriptionText
+    text-align: center
+    margin: 2.5rem 2.5rem 5rem 2.5rem
+
+.contentDescriptionAction
+    width: 100%
+
+    display: flex
+    justify-content: space-evenly

@@ -1,0 +1,46 @@
+@import '../../../../assets/style/index'
+
+$preview_width: 12rem
+$image_size: 20rem
+
+.box
+    width: 100%
+    max-width: $standard_max_width
+
+    margin: 0 auto
+    padding: 0 5rem
+
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 2.5rem
+
+    @include md
+        grid-template-columns: repeat(2, 1fr)
+        padding: 0 1rem
+
+    > div
+        width: 100%
+
+
+.preview
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+
+.previewImage
+    width: $preview_width
+    height: $preview_width
+    border-radius: 50%
+
+.previewTitle
+    width: 120%
+    height: auto
+    margin-top: 2.5rem
+
+    text-align: center
+    color: $black
+
+
+

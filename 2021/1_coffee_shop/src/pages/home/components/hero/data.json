@@ -1,0 +1,26 @@
+{
+  "title": "In coffee we trust",
+  "subtitle": "Flavors from around the world, choose your favorite",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur cupiditate dignissimos, ducimus eligendi, eos eum, iste molestias numquam placeat provident quasi! Amet, at atque, cumque debitis, facere fuga laboriosam minima quam quas quasi repellat rerum! Asperiores non quis voluptatibus.",
+  "action": {
+    "name": "shop",
+    "link": "/shop"
+  },
+  "social": [
+    {
+      "name": "instagram",
+      "name_short": "in",
+      "link": ""
+    },
+    {
+      "name": "twitter",
+      "name_short": "tw",
+      "link": ""
+    },
+    {
+      "name": "facebook",
+      "name_short": "fb",
+      "link": ""
+    }
+  ]
+}

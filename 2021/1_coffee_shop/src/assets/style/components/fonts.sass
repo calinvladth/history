@@ -1,0 +1,28 @@
+.font
+    font-family: $font-title
+    text-transform: uppercase
+    font-weight: 700
+
+    &__title
+        letter-spacing: 1rem
+        text-indent: 1rem
+        font-size: 3.25rem
+
+    &__subtitle
+        letter-spacing: .5rem
+        text-indent: .5rem
+        font-size: 2.25rem
+        font-weight: 400
+
+        &--big
+            font-size: 3rem
+
+            @include sm
+                font-size: 2.75rem
+
+
+    &__paragraph
+        font-family: $font-main
+        font-weight: 400
+        font-size: 1.6rem
+

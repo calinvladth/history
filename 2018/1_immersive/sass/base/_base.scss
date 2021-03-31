@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    
+
+    @include respond(1400) {
+        font-size: 70%;
+    }
+
+    @include respond(1600) {
+        font-size: 82.5%;
+    }
+
+    // This defines what 1rem is
+    font-size: 62.5%;
+
+    @include respond(1230) {
+        font-size: 60%;
+    }
+
+    @include respond(1000) {
+        font-size: 55%;
+    }
+
+    @include respond(768) {
+        font-size: 35%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+} 
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}

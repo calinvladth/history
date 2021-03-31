@@ -1,0 +1,71 @@
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126806597-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-126806597-1');
+        </script>
+
+        <link rel="icon" href="/img/logobar.png" type="image/gif">
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond|PT+Sans+Narrow" rel="stylesheet">   
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>   
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+ 
+        <% if(currentUser || currentUser && currentUser.isAdmin) { %>
+        <header class="header">
+            <div class="header__width">        
+
+                
+
+                    <div class="header__box">
+                        <a href="/users/<%= currentUser._id %>" class="header__box--link">
+                            Profilseite
+                        </a>
+                    </div>
+
+                    <div class="header__box">
+                        <a href="/users" class="header__box--link">
+                            Benutzer
+                        </a>  
+                    </div> 
+    
+                    <div class="header__box">
+                        <a href="/logout" class="header__box--link">
+                            Logout
+                        </a>
+                    </div>
+
+                    <% if(currentUser && currentUser.isAdmin) { %>
+                    <div class="header__box">
+                        <a href="/register" class="header__box--link">
+                            Neuer Benutzer
+                        </a>  
+                    </div> 
+                    <% }%>
+                
+
+            </div>  
+        </header>
+        <% }%>
+               
+    
+    
+        
+        <% if(error && error.length > 0){ %>
+            <div class="alert" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    

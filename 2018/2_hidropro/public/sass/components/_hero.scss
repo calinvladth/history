@@ -1,0 +1,114 @@
+.hero {
+
+    &__img{
+        height: 100%; 
+        width: 100%;
+        filter: brightness(45%);
+    }
+
+    &__heading {
+        @include yCenter;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__title {
+        text-transform: initial;
+
+        font-size: 4.5rem;
+
+        @include respond(1000) {
+            font-size: 4rem;
+        }
+
+        @include respond(768) {
+            font-size: 3.5rem;
+        }
+
+        @include respond(500) {
+            font-size: 3rem;
+        }
+
+
+        
+        &--closer {
+            display: inline-block;
+            font-weight: 600;
+            
+        }
+
+        &--mini {
+            display: inline-block;
+            margin-left: -1rem;
+            font-size: 3.5rem;
+            font-weight: 600;
+
+            @include respond(1000) {
+                font-size: 3rem;
+            }
+
+            @include respond(768) {
+                font-size: 2.5rem;
+            }
+
+            @include respond(500) {
+                font-size: 2rem;
+            }
+        }
+
+        &--small {
+            font-size: 2.5rem;
+            color: $white;
+
+            @include respond(1000) {
+                font-size: 2rem;
+            }
+
+            @include respond(768) {
+                font-size: 1.5rem;
+            }
+
+            @include respond(500) {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    &__button {
+        color: $white;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 2rem 1.5rem;
+        position: relative;
+        top: 4rem;
+        background-color: $blue;
+        border-radius: 3px;
+        box-shadow: inset .3rem .1rem 2rem rgba($black, .7);
+        transition: all .4s;
+        outline: none;
+
+        &:active,
+        &:hover {
+            color: $primary;
+            position: relative;
+            top: 3.5rem;
+        }
+
+        @include respond(1000) {
+            font-size: 1.2rem;
+            padding: 1.5rem 1.5rem;
+        }
+
+        @include respond(768) {
+            font-size: 1rem;
+        }
+
+        @include respond(500) {
+            font-size: .9rem;
+        }
+
+        
+
+    }
+}

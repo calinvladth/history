@@ -1,0 +1,69 @@
+.title-2 {
+    position: relative;
+    top: 3rem;
+
+    &__first-2 {
+        font-size: 2.7rem;
+        font-weight: 400;
+        text-align: right;
+        
+        width: 110%;
+        margin-top: 3rem;
+
+        @include respond(1230) {
+            font-size: 2.2rem;
+        }
+
+        @include respond(1000) {
+            font-size: 1.8rem;
+        }
+
+        @include respond(768) {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &__second-2 {
+        
+        width: 110%;
+        font-size: 2.7rem;
+        font-weight: 400;
+        text-align: left;
+        margin-left: -6rem;
+        margin-top: 7.5rem;
+
+        @include respond(1230) {
+            font-size: 2.2rem;
+        }
+
+        @include respond(1000) {
+            font-size: 1.8rem;
+            margin-left: -4rem;
+        }
+
+        @include respond(768) {
+            text-align: center;
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &__break-2 {
+        width: 1px;
+        height: 15rem;
+        background-color: $grey;
+        left: 50%;
+        transform: rotate(-20deg);
+        position: absolute;
+
+        @include respond(768) {
+            transform: translateX(-50%) rotate(90deg);
+            margin-top: -1.5rem;
+            
+        }
+    }
+
+   
+
+}

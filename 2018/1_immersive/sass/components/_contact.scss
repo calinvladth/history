@@ -1,0 +1,201 @@
+.contact {
+    height: 100vh; 
+    padding-left: 15%;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    // @include respond(1400) {
+    //     height: 75rem;
+    // }
+
+    // @include respond(1230) {
+    //     height: 60rem;
+    // }
+
+    @include respond(1000) {
+        height: 50rem;
+    }
+
+    @include respond(768) {
+        height: 70rem;
+    }
+
+    &__bubble{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 17.5%;
+        z-index: -50;
+    }
+
+    &__img {
+        height: 80%;
+ 
+        @include respond(768) {
+            height: 70%;
+        }
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        position: relative;
+        display: inline-block;
+
+        @include respond(1230) {
+            font-size: 2rem;
+        }
+    
+        @include respond(1000) {
+            font-size: 1.75rem;
+        }
+
+        @include respond(768) {
+            font-size: 2.5rem;;
+        }
+
+        &::before {
+            content: "";
+            height: 100%;
+            width: 80%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all .4s;
+            border-bottom: 2px solid $primary;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+    }
+
+    &__paragraph {
+        font-size: 1.6rem;
+        margin-top: 3rem;
+
+        &-second {
+            font-size: 1.6rem;
+            margin-bottom: 3rem;
+
+            @include respond(1230) {
+                font-size: 1.4rem;
+            }
+        
+            @include respond(1000) {
+                font-size: 1.3rem;
+            }
+    
+            @include respond(768) {
+                font-size: 1.4rem;
+            }
+        }
+       
+        
+
+        @include respond(1230) {
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+        }
+    
+        @include respond(1000) {
+            font-size: 1.3rem;
+            margin-top: 1rem
+        }
+
+        @include respond(768) {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    font-size: 1.4rem;
+
+    @include respond(1000) {
+        font-size: 1.2rem;
+    }
+    
+    @include respond(768) {
+        font-size: 1.4rem;
+    }
+}
+
+
+.input {
+    background-color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 700;
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 1.5rem;
+    // margin: 1.5rem 0;
+    color: darken($grey, 50%); 
+    border-bottom: 3px solid $primary;
+
+    @include respond(1000) {
+        padding: 1rem;
+    }
+
+    @include respond(768) {
+        width: 90%;
+    }
+
+    &--middle {
+        margin: 6rem 0;
+
+        @include respond(1000){
+            margin: 3rem 0;
+        }
+    }
+
+    &::placeholder {
+        color: rgba($primary, .6);
+        font-weight: bold;
+    }
+
+    &:focus {
+        border-bottom:3px solid darken($primary, 15%);
+    }
+
+    &:focus:invalid {
+        border-bottom: 3px solid $red;
+    }
+}
+
+.textarea {
+    background-color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1.5rem;
+    margin-bottom: 5rem;
+    border-bottom: 3px solid $primary;
+
+    @include respond(768) {
+        width: 120%;
+    }
+
+    &::placeholder {
+        color: rgba($primary, .6);
+    }
+
+    &:focus {
+        color: darken($grey, 50%);
+        border-bottom:3px solid darken($primary, 15%);
+    }
+}
+

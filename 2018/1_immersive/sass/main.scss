@@ -1,0 +1,21 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utillities";
+
+@import "components/hero";
+@import "components/social";
+@import "components/despre";
+@import "components/info";
+@import "components/portofoliu";
+@import "components/grafic";  
+@import "components/contact"; 
+@import "components/preview"; 
+@import "components/popup";
+@import "components/button"; 
+
+
+@import "layout/header";
+@import "layout/footer";

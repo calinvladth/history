@@ -1,0 +1,338 @@
+<% include ../partials/header %>
+
+            <% if(currentUser && currentUser.isAdmin) { %> 
+            <form class="form" action="/scans" method="POST">
+                <div class="form__box">
+                <h1 class="form__box--name">Grundlegende Informationen für den Scan</h1>  
+                <h3 class="form__name">Projektname</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="propertyName" placeholder="Projektname">
+                </div>
+
+                <h3 class="form__name">Projektbild für Profilseite</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="propertyImage" placeholder="Projektbild (jpg, png)">
+                </div>
+
+                <h3 class="form__name">Erster benutzerdefinierter Bildname</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="propertyCustomName" placeholder="Property custom name">
+                </div>
+
+                <h3 class="form__name">Erste Benutzerdefinierte Bildlink</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="propertyMap" placeholder="Projektübersicht (jpg, png)">
+                </div>
+
+                <h3 class="form__name">Zweiter benutzerdefinierter Bildname</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="customImageName" placeholder="customImageName">
+                </div>
+                <h3 class="form__name">Zweiter benutzerdefinierter Bildlink</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="customImageLink" placeholder="customImageLink">
+                </div>
+
+                <h3 class="form__name">Erster benutzerdefinierter Pdf / Link-Name</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="customPdfName" placeholder="customPdfName">
+                </div>
+                <h3 class="form__name">Erstes PDF / Link</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="customPdfLink" placeholder="customPdfLink">
+                </div>
+
+                <h3 class="form__name">Zweiter benutzerdefinierter Pdf / Link-Name</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="customPdfName1" placeholder="customPdfName">
+                </div>
+                <h3 class="form__name">Zweites Pdf / Link</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="customPdfLink1" placeholder="customPdfLink">
+                </div>
+
+                <h3 class="form__name">Google Street View / Map</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="streetViewMap" placeholder="Street View / Map">
+                </div>
+
+                <h3 class="form__name">Google Street View; Fügen Sie hier die URL zur <i class="dark">Einbettung </i>  ein</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="streetView" placeholder="Street View URL">
+                </div>
+
+                <!-- <h3 class="form__name">Video</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="video" placeholder="https://www.youtube.com/embed/ejrjuZ5PDEc">
+                </div> -->
+
+                <h3 class="form__name">Firmenlogo</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="logo" placeholder="Logo">
+                </div>
+
+                <h3 class="form__name">Schreiben Sie <i class="dark"> "schwarz" </i> für dunkles Design oder <i class="dark">"weiß"</i> für helles Design!</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="whitePage" placeholder="schwarz / weiß">
+                </div>
+                </div>
+
+                <div class="form__box">
+                    <h1 class="form__box--name">Virtuelle Rundgänge</h1> 
+                    <!-- Need more scans -->
+                <h3 class="form__name">Angezeigter Titel 1. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualName" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+
+                <h3 class="form__name">Link 1. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLink" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 2. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName1" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 2. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom1" placeholder="Fügen Sie hier den Link ein">
+                </div>
+                <h3 class="form__name">Angezeigter Titel 3. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName2" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 3. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom2" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 4. Rundgang</h3>
+                <div class="form__group"> 
+                    <input class="form__control" type="text" name="roomName3" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 4. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom3" placeholder="Fügen Sie hier den Link ein">
+                </div>  
+
+                <h3 class="form__name">Angezeigter Titel 5. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName4" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 5. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom4" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <!-- EXTRA -->
+                
+
+                <h3 class="form__name">Angezeigter Titel 6. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName5" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 6. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom5" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 7. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName6" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 7. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom6" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 8. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName7" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 8. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom7" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 9. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName8" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 9. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom8" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 10. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName9" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 10. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom9" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 11. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName10" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 11. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom10" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 12. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName11" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 12. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom11" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 13. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName12" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 13. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom12" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                
+
+                <h3 class="form__name">Angezeigter Titel 14. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName13" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 14. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom13" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 15. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName14" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 15. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom14" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 16. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName15" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 16. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom15" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 17. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName16" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 17. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom16" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 18. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName17" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 18. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom17" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 19. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName18" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 19. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom18" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                <h3 class="form__name">Angezeigter Titel 20. Rundgang</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="roomName19" placeholder="Fügen Sie hier den angezeigten Titel ein">
+                </div>
+                <h3 class="form__name">Link 20. Rundgang</h3> 
+                <div class="form__group">
+                    <input class="form__control" type="text" name="virtualLinkRoom19" placeholder="Fügen Sie hier den Link ein">
+                </div>
+
+                
+                </div>
+
+
+                <div class="form__box">
+                        <h1 class="form__box--name">Social Media</h1> 
+                <h3 class="form__name">Website URL (Eingabe beginnend mit <i class="dark">http</i> oder <i class="dark">https</i>)</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="websiteUrl" placeholder="WebsiteUrl">
+                </div>
+
+                <h1 class="form__box--name white margin-bottom"><i class="dark">facebook</i>, <i class="dark">instagram</i> und <i class="dark">linkedin</i></h1>
+
+                <!-- <h3 class="form__name">"<i class="dark">facebook</i>"</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="socialName1" value="facebook">
+                </div> -->
+                <h3 class="form__name">Facebook Link Beispiel:("<i class="dark">https://www.facebook.com/username</i>")</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="socialLink1" placeholder="https://facebook.com/example">
+                </div>
+
+                <!-- <h3 class="form__name">"<i class="dark">instagram</i>"</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="socialName2" value="instagram">
+                </div> -->
+                <h3 class="form__name">Instagram Link Beispiel:("<i class="dark">https://www.instagram.com/username</i>")</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="socialLink2" placeholder="https://facebook.com/example">
+                </div>
+
+                <!-- <h3 class="form__name">"<i class="dark">linkedin</i>"</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="socialName3" value="linkedin">
+                </div> -->
+                <h3 class="form__name">Linkedin Link Beispiel:("<i class="dark">https://www.linkedin.com/username</i>")</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="socialLink3" placeholder="https://linkedin.com/example">
+                </div>
+                <!-- <h3 class="form__name">"<i class="dark">twitter</i>"</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="socialName4" value="twitter">
+                </div> -->
+                <h3 class="form__name">Twitter Link Beispiel:("<i class="dark">https://www.twitter.com/username</i>")</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="socialLink4" placeholder="https://twitter.com/example">
+                </div>
+
+                </div>
+                
+                <h3 class="form__name">"News" (Geben Sie hier den Text ein)</h3>
+                <div class="form__group">
+                        <textarea class="form__textarea" name="news" id="" cols="30" rows="10"></textarea>
+                </div>
+                
+
+                <div class="form__group">
+                     
+                    <button class="form__button">Eingabe</button>
+                        
+                </div>
+            </form>
+            <% } else {%>
+               <h1 class="form__placeholder">Du musst zurück gehen</h1> 
+            <% } %>
+            <!-- <a class="form__exit" href="/users">Zurück</a> -->
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+

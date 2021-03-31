@@ -1,0 +1,29 @@
+.user__page {
+    min-height: calc(var(--vh, 1vh) * 100);
+    max-width: 160rem;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+    @include respond(1700) {
+        width: 100%;   
+    } 
+
+    @include respond(900) {
+        flex-direction: column;
+        top: 0rem;
+        min-height: 0;
+        height: auto;
+    }
+
+    // @include respond(900) {
+    //     width: 100%;
+    // }
+
+}

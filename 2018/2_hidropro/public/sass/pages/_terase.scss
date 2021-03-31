@@ -1,0 +1,612 @@
+.p2__box {
+    
+ 
+    background-color: $blue;
+    height: calc(25rem + 10vh); 
+    position: relative;
+
+    @include respond(1000) {
+        height: 25rem;
+    }
+
+    @include respond(768) {
+        height: 27rem;
+    }
+
+    @include respond(500) {
+        height: 22rem;
+    }
+
+
+
+    &--center {
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // background-color: rgba(pink, .4);
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 140%;
+        top: -20%;
+        left: 0;
+        border-left: 3px solid $primary;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 140%;
+        top: 80%;
+        right: 0;
+        border-right: 3px solid $primary;
+    }
+
+
+}
+
+.p2 {
+    font-size: 1.4rem;
+        color: white;
+        font-weight: 600;
+
+        @include respond(1000) {
+            font-size: 1.2rem;
+        }
+
+        @include respond(768) {
+            font-size: 1rem;
+        }
+
+        @include respond(500) {
+            font-size: .9rem;
+        }
+
+        @include respond(375) {
+            font-size: .8rem;
+        }
+        
+
+    &__first {
+        // width: 60%;
+        text-align: right;
+        width: 70%;
+        float: right;
+        margin-bottom: 5rem;
+        padding-right: 5rem;
+
+        @include respond(500) {
+            padding-right: 0;
+            width: 85%;
+        }
+    }
+
+    &__second {
+        text-align: left;
+        width: 70%;
+        float: left;
+        padding-left: 5rem;
+
+        @include respond(500) {
+            padding-left: 0;
+            width: 85%;
+        }
+    }
+
+    &--yellow {
+        font-size: 1.6rem;
+        color: $primary;
+        font-weight: 700;
+        padding-left: 5rem;
+        padding-top: 5rem;
+        
+
+        @include  respond(1000) {
+
+            font-size: 1.4rem;
+        }
+
+        @include  respond(768) {
+            margin-top: 0;    
+            width: 120%;
+            font-size: 1.2rem;
+        }
+
+        @include  respond(500) {
+            padding-left: 2rem;
+            padding-right: 3rem;
+            width: 120%;
+            font-size: 1rem;
+            position: relative;
+            top: -5rem;
+        }
+
+        @include respond(375) {
+            width: 170%;
+            font-size: .9rem;
+            top: -8rem;
+        }
+    }
+}
+
+.hterase {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
+
+    &__box {
+        margin-left: 5rem;
+        width: 35%;
+        height: 50rem;
+        // background-color: red;
+        position: absolute;
+        left: 0rem;
+        top: -3rem;
+        
+
+        @include respond(1000) {
+            height: 45rem;
+            top: -1rem;
+        }
+
+        
+            @include respond(768) {
+                width: 35%;
+                height: 35rem;
+                top: -1rem;
+                left: 5rem;
+                // transform: translateX(-50%);
+                margin: 0 auto;
+            }
+
+            @include respond(500) {
+                height: 25rem;
+            }
+
+            @include respond(375) {
+                height: 20rem; 
+                width: 40%;
+                left: .8rem;
+            }
+        
+
+        // @include  respond(768) {
+        //     width: 100%;
+        //     height: 20rem;
+        // }
+
+        // @include respond(500) {
+        //     height: 37.5rem;
+        // }
+
+        &--center {
+            width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        &--second{
+            width: 45%;
+            height: 35rem;
+            // background-color: red; 
+            margin: 0 auto;
+            top: -6rem;
+            right: 5rem;
+            position: absolute;
+
+            @include respond(1000) {
+                height: 30rem;
+                top: -4rem;
+            }
+
+            @include respond(768) {
+                width: 40%;
+                height: 20rem;
+                top: -3rem;
+                right: 5rem;
+                margin: 0 auto;
+            }
+
+            @include respond(500) {
+                height: 17.5rem;
+            }
+
+            @include respond(375) {
+                width: 50%;
+                height: 15rem; 
+                right: .8rem;
+            }
+
+            // @include respond(500) {
+            //     width: 100%;
+            //     height: 25rem;
+            //     top: 10rem;
+            //     left: 0;
+            // }
+    
+            // @include respond(500) {
+            //     height: 25rem;
+            // }
+        } 
+
+        &--image {
+            // background-color: red;
+            height: 35rem;
+            width: 90%;
+            position: relative;
+            top: 8rem;
+
+            @include respond(1000) {
+                top: 2rem;
+            }
+
+            @include respond(768) {
+                width: 60%;
+                margin: 0 auto;
+                height: 25rem;
+            }
+
+
+            @include respond(500) {
+                width: 90%;
+                height: 25rem;
+                margin: 0 auto;
+            }
+
+            @include respond(375) {
+                width: 90%;
+                height: 15rem;
+            }
+  
+        }
+
+        &--verzi {
+            width: 100%;
+            height: calc(45rem + 10vh);
+            // background-color: rgba(pink,.4);
+            position: relative;
+            
+
+            @include respond(768) {
+                height: 55rem;
+                top: 2rem;
+            }
+
+
+            @include respond(768) {
+                height: 60rem;
+                top: 0;
+            }
+
+            @include respond(500) {
+                height: 52.5rem;
+                font-size: .8rem;
+            }
+
+            @include respond(375) {
+                height: 50rem;
+                font-size: .8rem;
+            }
+
+           
+            
+        }
+
+        &--rasina {
+            margin-top: 8rem;
+     
+            // background-color: rgba(pink, .4);
+            // height: calc(55rem + 10vh);
+
+            @include  respond(768) {
+                margin-top: 6rem;
+            }
+
+            
+
+        }
+
+        &--circulabile {
+            
+            margin-top: 8rem;
+            height: calc(35rem + 10vh);
+            background-color: $blue;
+
+            &-image {
+                padding-right: 5rem;
+                width: 50%;
+                height: 85%;
+                // background-color:  red;
+                position: absolute;
+                right: 5rem;
+                top: -5rem;
+
+                @include  respond(768) {
+                    width: 45%;
+                    height: 80%;
+                    // right: -5rem; 
+                    // left: 50%;
+                    // transform: translateX(-50%);
+
+                }
+
+
+                @include  respond(500) {
+                    width: 50%;
+                    height: 30rem;
+                    right:0;
+                    // right: -5rem; 
+                    // left: 50%;
+                    // transform: translateX(-50%);
+
+                }
+
+                @include respond(375) {
+                    width: 60%;
+                    height: 25rem;
+                }
+            }
+
+            &-paragraph {
+                left: 5rem;
+                width: 50%;
+                position: absolute;
+                top: 75%;
+            }
+        }
+
+        &--necirculabile {
+            margin-bottom: 8rem;
+            // position: relative;
+
+            // @include respond(375) {
+            //     top:
+            // }
+
+
+            &-image {
+                float: left;
+                    margin: 5rem 5rem 2rem 5rem;
+                    width: 55%;
+                    height: 35rem;
+                    padding-bottom: 5rem;
+                    
+                    
+                    @include  respond(768) {
+                       width: 50%;
+                       height: 25rem;
+                    }
+
+                    @include  respond(500) {
+                        width: 50%;
+                        height: 15rem;
+                        margin: 5rem 2.5rem 1rem 2.5rem;
+                     }
+                
+            }
+
+            &-paragraph {
+                padding-top: 27rem;
+                padding-left: 5rem;
+
+                @include respond(500) {
+                    padding-top: 12.5rem;  
+                    padding-left: 2.5rem; 
+                }
+            }
+        }
+    }
+
+    &__title {
+        font-size: 3rem;
+        text-transform: capitalize;
+        color: $white;
+        font-weight: 700;
+
+        @include respond(1000) {
+            font-size: 2.5rem;
+        
+        }
+        @include respond(768) {
+            font-size: 2rem;
+        }
+
+        @include respond(500) {
+            font-size: 1.5rem;
+            
+        }
+        
+
+        &--verzi {
+            position: relative;
+            display: inline-block;
+            margin-left: 2rem;
+            margin-top: 55rem;
+            margin-bottom: 5rem;
+
+            @include  respond(768) {
+                margin-top: 40rem;
+                margin-bottom: 0;
+            }
+
+            @include respond(500) {
+                margin-top: 35rem;
+                margin-bottom: 5rem;
+            }
+
+            @include respond(375) {
+                margin-top: 27rem;
+                margin-bottom: 2rem;;
+            }
+
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 120%;
+                height: 100%;
+                top: 1rem;
+                left: -10%;
+                border-bottom: 3px solid $primary;
+            }
+        }
+
+        &--rasina {
+            margin-top: 5rem;
+            margin-right: -3rem;
+            position: relative;
+            display: inline-block;
+            float: right;
+
+
+            @include  respond(768) {
+                margin-top: 12rem;
+            }
+
+            @include respond(500) {
+                margin-top: 7em;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 90%;
+                height: 100%;
+                top: 1rem;
+                right: 0;
+                border-bottom: 3px solid $primary;
+            }
+        }
+
+        &--circulabile {
+            top: 5rem;
+            position: relative;
+            display: inline-block;
+            margin-left: 2rem;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 120%;
+                height: 100%;
+                top: 1rem;;
+                left: -10%;
+                border-bottom: 3px solid $primary;
+            }
+        }
+    }
+
+    &__paragraph {
+        &--verzi {
+            padding-top: 0 5rem;
+            line-height: 2.8rem; 
+            vertical-align: middle;
+            
+            // &-mtop {
+            //     padding-top: 10rem;
+
+            //     @include respond(1000) {
+            //         padding-top: 0rem; 
+            //     }
+ 
+            //     @include respond(768) {
+            //         padding-top: -5rem; 
+            //     }
+
+            //     @include respond(500) {
+            //         padding-top: 7rem; 
+            //     }margin-top: 5rem;
+            // }
+            &:not(:first-child) {
+                margin-top: 5rem;
+
+                @include respond(1000) {
+                    margin-top: 0;
+                }
+            }
+
+            @include respond(1000) {
+                font-size: 1rem;
+                line-height: 2.2rem;
+                
+            }
+
+            @include  respond(768) {
+                padding: 0 3rem;
+            }
+
+
+            @include  respond(500) {
+                padding: 0 1.5rem;
+                font-size: .9rem;
+
+            }
+
+            @include respond(375) {
+                font-size: .8rem;
+    
+            }
+        }
+
+        &--circulabile {
+            padding-left: 5rem;
+            margin-top: 10rem;
+
+            @include  respond(768) {
+                padding: 0 5rem;
+                margin-top: 8rem;
+            }
+            
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;margin-top: 5rem;
+
+        &--rasina {
+            // background-color: red;
+            width: 50%;
+            height: 30rem;
+            // position: absolute;
+            margin: 0 auto;
+
+            @include  respond(768) {
+                width: 80%;
+            }
+
+            @include  respond(500) {
+                width: 90%;
+                height: 20rem;
+            }
+
+            @include  respond(500) {
+                height: 15rem;
+            }
+        }
+    }
+
+    &__relative {
+        height: calc(35rem + 10vh);
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 120%;
+            top: -30%;
+            left: 0;
+            border-left: 3px solid $primary;
+        }
+    }
+}

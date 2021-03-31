@@ -1,0 +1,22 @@
+    <footer class="footer footer-special">
+        <div class="footer__width footer__width--speciale">
+        <h3 class="footer__link white">&copy; RAUMGANG 2018 | All rights reserved</h3>
+        <div class="footer__side">   
+                <a href="/datenschutz" target="_blank">
+                    <h3 class="footer__link white hover">DATENSCHUTZ</h3>
+                </a>
+                <a href="/impressum" target="_blank">
+                    <h3 class="footer__link footer--marginleft white hover">IMPRESSUM</h3>
+                </a>
+            <% if(!currentUser) { %>
+            <a href="/">
+                <h3 class="footer__link footer--marginleft orange ">LOGIN</h3>
+            </a>
+            <% } %>
+        </div>
+        </div>
+    </footer> 
+    <script src="/assets/png.js"></script>      
+    <script src="/assets/hideAdmin.js"></script> 
+    </body>
+</html>

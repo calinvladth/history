@@ -1,0 +1,204 @@
+.services {
+    background-color: $primary;
+    margin: 0 5rem;
+    &__heading {
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+
+        @include respond(1000) {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        @include respond(768) {
+            font-size: 2rem;
+        }
+
+        @include respond(500) {
+            font-size: 1.7rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @include respond(375) {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__container {
+        position: relative;
+        width: 100%;
+      }
+     
+    &__image {
+        display: block;
+        width: 100%;
+        height: 35rem;
+
+        @include respond(1000) {
+            height: 30rem;
+        }
+
+        @include respond(768) {
+            height: 25rem;
+        }
+
+        @include respond(500) {
+            width: 60%;
+            height: 40rem;
+            margin: 1.5rem auto;
+            
+        }
+
+
+        @include respond(375) {
+            width: 80%;
+            height: 40rem;
+            
+        }
+      }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: $blue;
+        backface-visibility: hidden;
+
+        @include respond(500) {
+            width: 60%;
+            
+            margin: 0 auto;
+        }
+
+        @include respond(375) {
+            width: 80%;
+        }
+    }
+
+    &__link {
+        width: 100%;
+        color: $white;
+        font-size: 1.6rem;
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        transform: translateY(-50%);
+        // -ms-transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        font-weight: 600;
+        backface-visibility: hidden;
+
+        @include respond(1000) {
+            font-size: 1.3rem;
+        }        
+
+        @include respond(768) {
+            font-size: 1rem;
+        }
+
+        &:after {
+            content: '';
+            width: 65%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom: 2px solid $primary;
+            
+        }
+
+        &__portofolio {
+            
+            // width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        &--zoom {
+            position: relative; 
+            top: 18.65rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $primary;
+            padding: 1rem;  
+            
+            @include respond(1230) {
+                top: 18.65rem;
+            }
+            
+            @include respond(1000) {
+                top: 16rem;
+            }
+
+            @include respond(768) {
+                bottom: 20%;
+                height: 4.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            @include respond(500) {
+                top: 60%;
+                height: 4.5rem;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 5rem;
+        text-align: center;
+
+       
+
+        @include respond(500) {
+            margin-top: 2rem;
+        }
+        
+    }
+
+}
+
+  .services__container:hover .services__overlay {
+    opacity: 1;
+  }
+  
+//   .slide {
+//         margin-top: 0;
+//         opacity: 1;
+//         display: block;
+
+//   }
+  
+
+.zoom {
+    animation: slide 1s 1;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+
+
+  @keyframes slide{
+    0%   { opacity: 0; margin-top: -5rem; }
+    25%   { opacity: .25; margin-top: -1rem; }
+    50%   { opacity: .5; margin-top: -.5rem;}
+    100% { opacity: 1; margin-top: 0rem;}
+  }

@@ -1,0 +1,48 @@
+<% include ../partials/header %>
+
+       
+        
+            <form class="form" action="/users/<%= user._id %>?_method=PUT" method="POST">
+
+                <div class="form__box">
+                    <h1 class="form__box--name">Bearbeiten <%= user.username %></h1> 
+
+                <h3 class="form__name">Nutzername</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="user[username]" value="<%= user.username %>" required>
+                </div>
+
+                <!-- <h3 class="form__name">The AVATAR of the USER</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="user[avatar]" value="<%= user.avatar %>" required>
+                </div> -->
+               
+                <h3 class="form__name">Das Logo</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="user[companyLogo]" value="<%= user.companyLogo %>" required>
+                </div>
+
+                <h3 class="form__name">Firmenname</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="user[companyName]" value="<%= user.companyName %>" required>
+                </div>
+
+                <h3 class="form__name">Webseite</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="user[websiteUrl]" value="<%= user.websiteUrl %>" required>
+                </div>
+
+                <!-- <h3 class="form__name">The News Section</h3>
+                <div class="form__group">
+                    <input class="form__control" type="text" name="user[websiteUrl]" value="<%= user.websiteUrl %>" required>
+                </div> -->
+                </div>
+
+                <div class="form__group">
+                    <button class="form__button">Eingabe</button>
+                </div>
+            </form>
+            <!-- <a class="form__exit" href="/users">Zurück</a> -->
+      
+<% include ../partials/footer-special %>
+

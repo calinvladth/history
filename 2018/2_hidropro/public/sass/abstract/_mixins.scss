@@ -1,0 +1,49 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin yCenter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == 375 {
+        @media (max-width: 23.4375em) { @content };  //375
+    }
+
+    @if $breakpoint == 500 {
+        @media (max-width: 31.25em) { @content };  //600
+    }
+
+    @if $breakpoint == 768 {
+        @media (max-width: 48em) { @content };  //600
+    }
+
+    @if $breakpoint == 1000 {
+        @media (max-width: 62.5em) { @content };  //1000
+    }
+
+    @if $breakpoint == 1230 {
+        @media (max-width: 76.9em) { @content };  //1230
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5) { @content };  //1800
+    }
+}
+
+
+//Nu uita de 600 la portofoliu

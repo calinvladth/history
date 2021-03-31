@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta description="<%= hidro.meta %>">
+                <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat:300,400,600,700" rel="stylesheet">        
+                <link rel="stylesheet" href="public/css/icon-font.css">
+                <link rel="stylesheet"  href="/css/style.css">
+                
+                <!-- <link rel="shortcut icon" type="image/png"  href="img/logo-bar.png"> -->
+                
+                <title><%= hidro.title %></title> 
+                <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                
+        </head>
+
+    <body>
+        <header class="header">
+                <div class="header__line--color">
+                        <a href="mailto:maruntis.adrian@yahoo.ro">
+                    <p class="header__line--paragraph">
+                            <img src="/img/message.png" alt="Hidroizolatii pro, servicii hidroizolatie e-mail" class="header__line--i header__line--i slideright">
+                        <span class="slideleft">maruntis.adrian@yahoo.ro</span> 
+                    </p>
+                    </a>
+                    <a href="tel:0734078162">
+                    <p class="header__line--paragraph">
+                       <img src="/img/phone.png" alt="Hidroizolatii pro, servicii hidroizolatie telefon" class="header__line--i header__line--i-2 slideright"> 
+                       <span class="slideleft">0734078162</span>
+                    </p>
+                    </a>
+                    <p class="header__line--paragraph">
+                            <img src="/img/home.png" alt="Hidroizolatii pro, servicii hidroizolatie adresa" class="header__line--i header__line--i-3 slideright">
+                            <span class="slideleft">Sos. Andronache nr. 69 et 2, sector 2, Bucuresti</span>
+                    </p>
+                </div>
+
+                <div class="header__menu">
+                        <!-- <div class="header__links"> -->
+                            <a href="/#contact" class="header__link">contact</a>
+                            <a href="/#clienti" class="header__link">clienti</a>
+                            <a href="/#servicii" class="header__link header__link--active" id="start">servicii</a>
+                            <a href="/#about" class="header__link">despre</a> 
+                            <a href="/" class="header__link">home</a> 
+                        <!-- </div> -->
+                    </div>
+
+            <div class="logo__box">
+                <a href="/">
+                    <img src="/img/logo.png" alt="" class="logo">
+                </a>
+                
+            </div>
+            
+        </header>
+
+        <section class="idhero">
+                <img src="/img/<%= hidro.heroimage %>" alt="<%= hidro.heroimagemeta %>" class="idhero__image">
+                <div class="idhero__box">
+                    <h1 class="idhero__title letter-height">
+                        <%= hidro.pagetitle %>
+                    </h1>
+                </div>
+            </section>

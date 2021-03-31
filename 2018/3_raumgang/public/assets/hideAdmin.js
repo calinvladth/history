@@ -1,0 +1,1 @@
+document.getElementById('Raumgang').style.display = 'none';

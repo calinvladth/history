@@ -1,0 +1,26 @@
+.idhero {
+    height: calc(50rem + 10vh);
+    background-color: rgba($primary, .2);
+    position: relative;
+    left: 50%;    
+    transform: translateX(-50%);
+
+    @include respond(1000) {
+        height: 45rem;
+    }
+
+    @include respond(768) {
+        height: 40rem;
+    }
+
+    @include respond(500) {
+        height: 35rem;
+    }
+}
+
+.idbox {
+    height: auto;
+
+    position: relative;
+    margin: 0 auto;
+}

@@ -1,0 +1,68 @@
+.footer {
+    &__title {
+        font-size: 1.8rem;
+        text-align: center;
+        color: $darkish-grey;
+        font-weight: 600;
+        margin-bottom: 1rem;
+
+        @include respond(1230) {
+            font-size: 1.6rem;
+            
+        }
+
+        @include respond(1000) {
+            font-size: 1.4rem;
+            
+        }
+
+
+        @include respond(768) {
+            font-size: 1.2rem;
+            
+        }
+    }
+
+    &__paragraph {
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 2.8rem;
+
+        @include respond(1000) {
+            font-size: .9rem;
+        }
+
+        @include respond(768) {
+            font-size: .8rem;
+        }
+    }
+
+}
+
+.top {
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+
+    @include respond(1000) {
+        height: 5rem;
+    }
+
+    @include respond(768) {
+        height: 4rem;
+        right: 2rem;
+        bottom: 2rem;
+    }
+
+    @include respond(500) {
+        height: 3rem;
+        right: 1.5rem;
+        bottom: 1.5rem;
+    }
+
+    @include respond(375) {
+        height: 2rem;
+        right: 1rem;
+        bottom: 1rem;
+    }
+}

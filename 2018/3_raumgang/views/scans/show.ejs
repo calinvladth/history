@@ -1,0 +1,351 @@
+<% include ../partials/titles/usershow %>
+<% include ../partials/header %>
+
+
+    <% if(scan.isWhite) { %>
+        <div class="grid grid--white">
+    <% } else { %> 
+        <div class="grid">
+    <% }%>
+    
+<section class="top">
+    <div class="top__logo"> 
+        <a href="<%= scan.websiteUrl %>" target="_blank">
+        <img src="<%= scan.logo %>" alt="" class="top__logo--image">
+        <!-- <img src="/img/logo.png" alt="" class="top__logo--image"> -->
+    </a>
+    </div>
+
+    <!-- <% if(scan.isWhite) { %>
+        <div class="top__tutorial backcolorwhite dark hover">
+    <% } else { %> 
+        <div class="top__tutorial backcolorblack white-hover">
+    <% }%>
+        <a href="/scans/<%= scan._id %>/anleitung" target="_blank">
+
+            <% if(scan.isWhite) { %>
+                <h3 class="top__tutorial--header dark hover">
+            <% } else { %> 
+                <h3 class="top__tutorial--header white hover">
+            <% }%>
+            ANLEITUNG
+        </h3>
+    </a>
+    </div> -->
+</section>
+
+
+<% if(scan.isWhite) { %>
+    <section class="content backcolorwhite">
+<% } else { %> 
+    <section class="content backcolorblack">
+<% }%>
+
+    <div class="menu">
+
+        <% if(scan.isWhite) { %>
+            <li class="menu__all dark">
+                <div class="menu__button">
+                    <input type="checkbox" id="menu">
+                    <h3 class="menu__button--name dark hover" id="menuStart">
+                        MENÜ
+                    </h3>
+                    <img src="/img/menudark.png" alt="" class="menu__button--click" id="menuStartBtn">
+                </div>
+        <% } else { %> 
+            <li class="menu__all white">
+                <div class="menu__button">
+                    <input type="checkbox" id="menu">
+                    <h3 class="menu__button--name white hover" id="menuStart">
+                        MENÜ
+                    </h3>
+                    <img src="/img/menu.png" alt="" class="menu__button--click" id="menuStartBtn">
+                </div>
+
+        <% }%>
+       
+        <!-- <img src="/img/menu.png" alt="" class="menu__button"> -->
+        
+        <ul class="menu__drop" id="menuDrop">
+            
+            <li class="menu__link">
+                <a id="playmap"><%= scan.propertyCustomName %></a>
+            </li>
+            <li class="menu__link">
+                <a id="playmap2" target="image"><%= scan.customImageName %></a>
+            </li>
+            <li class="menu__link">
+                <a href="<%= scan.customPdfLink %>" target="_blank"><%= scan.customPdfName %></a>
+            </li>
+            <li class="menu__link">
+                <a href="<%= scan.customPdfLink1 %>" target="_blank"><%= scan.customPdfName1 %></a>
+            </li>
+            
+            <li class="menu__link">
+                <a href="<%= scan.streetView %>" target="iframe" class="social--hide"><%= scan.streetViewMap %></a>
+            </li>
+            <!-- <li class="menu__link">
+                <a href="">news</a>
+            </li> -->
+            <li class="menu__link">
+                <a href="/scans/<%= scan._id %>/anleitung" target="_blank">
+                    ANLEITUNG
+                </a>
+            </li>
+            <% if(currentUser && scan.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+            <li class="menu__link">
+                <a href="/scans/<%= scan._id %>/edit">Bearbeiten</a>
+            </li>
+            <% } %> 
+
+            <% if(currentUser && currentUser.isAdmin) { %>
+                <li>
+                <form id="delete-form" action="/scans/<%= scan._id %>?_method=DELETE" method="POST"> 
+                    <button class="menu__link--button">Löschen</button>
+                </form>
+                </li>
+            <% } %>
+        
+        </ul>
+    </li>
+    </div>
+
+    <div class="scan">
+        <iframe src="<%= scan.virtualLink %>" name="iframe" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <% if(scan.isWhite) { %>
+        <div class="shorts dark">
+    <% } else { %> 
+        <div class="shorts white">
+    <% }%>
+    <!-- <div class="shorts"> -->
+        <div class="shorts__box">
+
+        <a href="<%= scan.virtualLink %>" target="iframe">
+        <h3 class="shorts__heading">
+                <%= scan.virtualName %>
+        </h3>
+        </a>
+        <a href="<%= scan.virtualLinkRoom1 %>" target="iframe">
+            <h3 class="shorts__heading" id="text1">
+                <%= scan.roomName1 %>
+            </h3>
+        </a>
+        <a href="<%= scan.virtualLinkRoom2 %>" target="iframe">
+            <h3 class="shorts__heading" id="text2">
+                <%= scan.roomName2 %>
+            </h3>
+        </a>
+        <a href="<%= scan.virtualLinkRoom3 %>" target="iframe">
+            <h3 class="shorts__heading" id="text3">
+                <%= scan.roomName3 %>
+            </h3>
+        </a>
+        <a href="<%= scan.virtualLinkRoom4 %>" target="iframe">
+            <h3 class="shorts__heading" id="text4">
+                <%= scan.roomName4 %>
+            </h3>
+        </a>
+         <!-- First 5  -->
+         <a href="<%= scan.virtualLinkRoom5 %>" target="iframe">
+            <h3 class="shorts__heading" id="text5">
+                <%= scan.roomName5 %>
+            </h3>
+        </a>
+        <a href="<%= scan.virtualLinkRoom6 %>" target="iframe">
+            <h3 class="shorts__heading" id="text6">
+                <%= scan.roomName6 %>
+            </h3>
+        </a>
+        <a href="<%= scan.virtualLinkRoom7 %>" target="iframe">
+            <h3 class="shorts__heading" id="text7">
+                <%= scan.roomName7 %>
+            </h3>
+        </a>
+        <a href="<%= scan.virtualLinkRoom8 %>" target="iframe">
+            <h3 class="shorts__heading" id="text8">
+                <%= scan.roomName8 %>
+            </h3>
+        </a>
+        <a href="<%= scan.virtualLinkRoom9 %>" target="iframe">
+            <h3 class="shorts__heading" id="text9">
+                <%= scan.roomName9 %>
+            </h3>
+        </a>
+        <!-- First 10 -->
+            <a href="<%= scan.virtualLinkRoom10 %>" target="iframe">
+                <h3 class="shorts__heading" id="text10">
+                    <%= scan.roomName10 %>
+                </h3>
+            </a>
+            <a href="<%= scan.virtualLinkRoom11 %>" target="iframe">
+                <h3 class="shorts__heading" id="text11">
+                    <%= scan.roomName11 %>
+                </h3>
+            </a>
+            <a href="<%= scan.virtualLinkRoom12 %>" target="iframe">
+                <h3 class="shorts__heading" id="text12">
+                    <%= scan.roomName12 %>
+                </h3>
+            </a>
+
+            <a href="<%= scan.virtualLinkRoom13 %>" target="iframe">
+                <h3 class="shorts__heading" id="text13">
+                    <%= scan.roomName13 %>
+                </h3>
+            </a>
+            <a href="<%= scan.virtualLinkRoom14 %>" target="iframe">
+                <h3 class="shorts__heading" id="text14">
+                    <%= scan.roomName14 %>
+                </h3>
+            </a>
+            <!-- 15 --> 
+                <a href="<%= scan.virtualLinkRoom15 %>" target="iframe">
+                    <h3 class="shorts__heading" id="text15">
+                        <%= scan.roomName15 %>
+                    </h3>
+                </a>
+                <a href="<%= scan.virtualLinkRoom16 %>" target="iframe">
+                    <h3 class="shorts__heading" id="text16">
+                        <%= scan.roomName16 %>
+                    </h3>
+                </a>
+                <a href="<%= scan.virtualLinkRoom17 %>" target="iframe">
+                    <h3 class="shorts__heading" id="text17">
+                        <%= scan.roomName17 %>
+                    </h3>
+                </a>
+                <a href="<%= scan.virtualLinkRoom18 %>" target="iframe">
+                    <h3 class="shorts__heading" id="text18">
+                        <%= scan.roomName18 %>
+                    </h3>
+                </a>
+                <a href="<%= scan.virtualLinkRoom19 %>" target="iframe">
+                    <h3 class="shorts__heading" id="text19">
+                        <%= scan.roomName19 %>
+                    </h3>
+                </a>
+    </div>
+    </div>
+
+</section>
+
+  
+<% if(scan.isWhite) { %>
+    <section class="socials backcolorwhite">
+<% } else { %> 
+    <section class="socials backcolorblack">
+<% }%>
+
+
+<div class="website">
+
+    
+
+    <% if(scan.isWhite) { %>
+        <div class="website__box website__box--1">
+            <h3 class="website__heading dark">Für weitere Informationen</h3> 
+        </div>
+        <div class="website__box website__box--2 dark">
+            <h3 class="website__heading">besuchen Sie unsere <a href="<%= scan.websiteUrl %>" class="hover bold bigger" target="_blank">Webseite</a> </h3>
+        </div>
+    <% } else { %> 
+        <div class="website__box website__box--1">
+            <h3 class="website__heading white">Für weitere Informationen</h3>
+        </div>
+        <div class="website__box website__box--2 white">
+            <h3 class="website__heading">besuchen Sie unsere <a href="<%= scan.websiteUrl %>" class="hover bold bigger" target="_blank">Webseite</a> </h3>
+        </div>
+    <% }%>
+    
+
+</div>
+
+<div class="news">
+        <% if(scan.isWhite) { %>
+            <a id="playnews">
+                <p class="news__button backcolorwhitest--small dark">
+        <% } else { %> 
+            <a id="playnews"> 
+                <p class="news__button backcolorblack--small white">
+        <% }%>
+            NEWS
+        </p>
+    </a>
+</div>
+
+<div class="social">
+    
+    <% if(scan.isWhite) { %>
+        <div class="social__box social__box--1">
+            <h3 class="social__heading dark">Besuchen Sie uns auf</h3>
+        </div>
+        <div class="social__box social__box--2">
+            <a href="<%= scan.socialLink1 %>" class="social--hide" target="_blank">
+                <img src="/img/darkfacebook.png" alt="" class="social__icon">
+            </a>
+            <a href="<%= scan.socialLink2 %>" class="social--hide" target="_blank">
+                <img src="/img/darkinstagram.png" alt="" class="social__icon">
+            </a>
+            <a href="<%= scan.socialLink3 %>" class="social--hide" target="_blank">
+                <img src="/img/darklinkedin.png" alt="" class="social__icon">
+            </a>
+            <a href="<%= scan.socialLink4 %>" class="social--hide" target="_blank">
+                <img src="/img/darktwitter.png" alt="" class="social__icon">
+            </a>
+        </div>
+    <% } else { %> 
+        <div class="social__box social__box--1" >
+            <h3 class="social__heading white">Besuchen Sie uns auf</h3>
+        </div>
+        <div class="social__box social__box--2">
+            <a href="<%= scan.socialLink1 %>" class="social--hide" target="_blank">
+                <img src="/img/facebook.png" alt="" class="social__icon">
+            </a>
+            <a href="<%= scan.socialLink2 %>" class="social--hide" target="_blank">
+                <img src="/img/instagram.png" alt="" class="social__icon">
+            </a>
+            <a href="<%= scan.socialLink3 %>" class="social--hide" target="_blank">
+                <img src="/img/linkedin.png" alt="" class="social__icon">
+            </a>
+            <a href="<%= scan.socialLink4 %>" class="social--hide" target="_blank">
+                    <img src="/img/twitter.png" alt="" class="social__icon">
+                </a>
+        </div>
+    <% }%>
+    
+</div>
+
+</section>
+
+<!-- Popups for news and map -->
+<div class="popup" id="popup">
+    <div class="popup__width">
+        <div class="popup__box">
+            <img src="<%= scan.propertyMap %>" name="image" alt="" class="popup__image">
+        </div>
+    </div>
+    <!-- <img src="/img/cross.png" alt="" class="popup__close" id="popup__close">  -->
+</div>
+
+<div class="popup" id="popup2">
+    <div class="popup__width">
+        <div class="popup__box">
+            <img src="<%= scan.customImageLink %>" name="image" alt="" class="popup__image">
+        </div>
+    </div>
+    <!-- <img src="/img/cross.png" alt="" class="popup__close" id="popup__close">  -->
+</div>
+
+<div class="popup__news">
+    <div class="popup__news--width">
+        <div class="popup__news--box" id="textarea">
+               <p><%= scan.news %></p> 
+        </div>
+    </div>
+    <img src="/img/cross.png" alt="" class="popup__close" id="popup__close">
+</div>
+
+</div> 
+<% include ../partials/footer %>

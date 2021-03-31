@@ -1,0 +1,63 @@
+.about {
+ 
+
+    &__paragraph--1 {
+        line-height: 2.5rem;
+        width: 50%;
+        font-size: 1.2rem;
+        color: $white;
+        font-weight: 600;
+        padding: 0 10rem 0 5rem;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        @include respond(1000) {
+            font-size: 0.9rem;
+            line-height: 1.6rem;
+         }
+
+         @include respond (768) {
+             top: 25%;
+             width: 100%;
+            //  background-color: rgba(pink, .4);
+             padding: 3rem 8rem;
+         }
+
+         @include respond(500) {
+            padding: 1.5rem 4rem;
+         }
+    }
+
+    &__paragraph--2 {
+        line-height: 2.5rem;
+        text-align: right;
+        width: 50%;
+        font-size: 1.2rem;
+        color: $darkish-grey;
+        font-weight: 600;
+        padding: 0 5rem 0 10rem;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+
+        @include respond(1000) {
+            font-size: 0.9rem;
+            line-height: 1.6rem;
+         }
+
+         @include respond (768) {
+            width: 100%;
+            top: 75%;
+            // background-color: rgba(pink, .4);
+            padding: 3rem 8rem;
+        }
+
+        @include respond(500) {
+            padding: 1.5rem 4rem;
+         }
+    }
+    
+}

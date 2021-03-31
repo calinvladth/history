@@ -1,0 +1,317 @@
+.content {
+    // Do not forget The height in small screens
+    height: 55rem;
+    
+    width: 160rem;
+    margin: 0 auto;
+    
+    // You have a top x rem because of the navbar
+    margin-top: 8rem;
+
+    display: flex;
+    flex-direction: row;
+
+    @include respond(1700) {
+        width: 100%;
+    }
+
+    @include respond(1100) {
+        flex-direction: column;
+        height: auto;
+        // background-color: rgba(#000, .5); 
+    }
+
+    @include respond(600) {
+        margin-top: 4rem;
+    }
+ 
+    .menu, 
+    .shorts {
+        height: inherit;
+        width: 25%;
+        // background-color: rgba(#000, .5); 
+
+        @include respond(1100) {
+            width: 100%;
+            // height: 7.5rem;
+        }
+    }
+
+    .scan {
+        height: inherit;
+        width: 50%;
+        position: relative;
+
+        @include respond(1100) {
+            width: 100%;
+            height: 45vh;
+            // background-color: rgba(#000, .5); 
+
+        }
+    }
+}
+
+// This is the left side of the scan
+#menuDrop {
+    display: none;
+}
+
+#menuStart {
+    cursor:pointer;
+}
+
+#menu {
+    opacity: 0;
+    visibility: hidden;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    &__all {
+        height: 100%;
+        width: 90%;
+        border-right: 2px solid;
+        position: relative;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+
+        @include respond(1100) {
+            width: 85%;
+            margin: 0 auto;
+            min-height: 5rem;
+            // background-color: rgba(red, .1);
+            border: none;
+
+            flex-direction: row;
+            // flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        
+    }
+
+    &__drop {
+        // color: $white;
+        // font-size: 3rem;
+        margin-top: 5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: right;
+
+        @include respond(1100) {
+            font-size: 2.5rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            margin: 1.5rem 10%;
+            text-align: center;
+            z-index: 100;
+        }
+
+        @include respond(600) {
+            font-size: 2rem;   
+        }
+    }
+
+
+    &__button {
+        // background-color: rgba(red, .1);
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+       
+        @include respond(1100) {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 3rem;
+            justify-content: flex-start;
+
+        }
+
+        @include respond(600) {
+            height: 2.75rem;  
+        }
+
+        &--click {
+            margin-left: 2rem;
+            // background-color: rgba(green, .4);
+
+            @include respond(1100) {
+                margin: 0;
+                padding: 0;
+                
+            }
+        }
+
+        &--name {
+            font-size: 2.5rem;
+
+            @include respond(1100) {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        margin-top: 10%;
+        margin-right: 1.5rem;
+        font-size: 2rem;
+        cursor: pointer;
+        font-family: $font-2;
+
+        &:nth-of-type(1) {
+            margin-top: 0;
+        }
+
+        &:hover {
+            color: $primary;
+        }
+
+        @include respond(1100) {
+            margin: 0;
+            margin-bottom: 1rem;
+
+            &:nth-last-of-type(n) {
+                margin: 0;
+            }
+
+            // margin-left: 2rem;
+            // width: 50%;
+        }
+
+        &--button {
+            font-family: $font-2;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            color: red;
+            border: none; 
+            background-color: transparent;
+            outline: none;
+
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1.5rem; 
+        
+            &:hover {
+                color: $primary;
+            }
+
+            @include respond(1100) {
+                // position: relative;
+                right: 7.5%;
+                bottom: 50%; 
+                transform: translateY(50%);
+            }
+
+            @include respond(600) {
+                font-size: 1.5rem;   
+            }
+
+        }
+    }
+
+}
+
+// ul.menu__drop li {
+//     // opacity: 0;
+//     // visibility: hidden;
+//     display: none;
+//     // transition: all .4s;
+// }
+
+// li:hover > ul.menu__drop li  {
+//     // opacity: 1;
+//     // visibility: visible;
+//     display: block;
+
+// } 
+
+// li:hover > .menu__button > h3.menu__button--name {
+//     color: $primary;
+// }
+
+
+// This is the right side of the scan
+.shorts {
+    width: inherit;
+    height: inherit;
+    
+    font-size: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // background-color: rgba(red, .1);
+    
+
+    @include respond(1100) {
+        padding: 5rem 0;
+        max-height: 25vh;
+        text-align: center;
+    }
+    
+    &__box {
+        height: 90%;
+        width: 100%;
+        // padding-bottom: 5%;
+        // background-color: rgba(green, .1);
+        overflow-y: scroll;
+        
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+
+    }
+
+    &__heading {
+        align-self: flex-start;
+        margin: 5% 0;
+        margin-left: 10%;
+        padding: 0 0 1.5rem 0; 
+        text-transform: uppercase;
+        border-bottom: 2px solid;
+
+
+        &:hover {
+            color: $primary;
+            border-color: $primary;
+            // transform: scale(1.05);
+        }
+
+        @include respond(1100) {
+            width: 40%;
+            margin: 1.25rem auto;
+        }
+    }
+}
+
+// This is the middle of the content. More exactly, this is the scan
+iframe {
+    // width: 100%;
+    // height: 100% !important;
+
+    position: absolute;
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	width: 100%;
+    height: 100%;
+    
+    @include respond(1100) {
+        width: 85%;
+        margin: 0 auto;
+    }
+}

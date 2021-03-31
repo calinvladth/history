@@ -1,0 +1,168 @@
+// .btn { 
+    
+//     &:link,
+//     &:visited{
+//         text-transform: uppercase;
+//         font-size: $button-size-normal;
+//         display: inline-block;
+//         position: relative;
+        
+//         border-radius: 1.7rem; 
+//         transition: all .2s;
+        
+//     }
+
+//     &:hover {
+//         box-shadow: 0 1rem 2rem rgba($black,.2);
+//     }
+
+//     &:active {
+//         transform: translateY(-1px);
+//         box-shadow: 0 .5rem .1rem rgba($black,.2);
+//         z-index: -2;
+        
+//     }
+
+//     &::after {
+//         content: "";
+//         display: inline-block;
+//         height: 100%;
+//         width: 100%;
+//         border-radius: 1.7rem; 
+        
+//         position: absolute;
+//         top: .5rem;
+//         left: 1rem;
+//         z-index: -2;
+//         transition: all .3s;
+//         }
+        
+//     &-blue {
+//         background: $blue;
+//         color: $white;
+//         padding: 1rem 2.2rem;
+        
+
+//         &::after{
+//             border: 1px solid  $blue;
+//         }
+
+//         &:active {
+//             position: relative;
+//             background: darken($blue, 5%);
+            
+            
+//             &::after {
+//                 content: "";
+//                 width: 100%;
+//                 height: 100%;
+//                 position: absolute;
+//                 z-index: -1;
+//                 top: 0;
+//                 left:0;
+//                 border: 2px solid $blue;
+//             }
+//         }
+//     }
+
+// }
+
+// button {
+//     text-transform: uppercase;
+//     font-size: $button-size-normal;
+//     display: inline-block;
+//     padding: 1.5rem 2.2rem;
+//     border-radius: 1.7rem; 
+//     transition: all .2s;
+//     outline: none;
+// }
+
+
+/////////////////
+// The actual button
+
+button {
+    z-index: 500;
+    border-radius: 1rem;
+}
+ 
+.button {
+    font-size: 1.7rem;
+    font-weight: 700;
+    background-color: $blue;
+    padding: 1.25rem 3rem; 
+    color: $white;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    // z-index: 500;
+
+    @include respond(1000) {
+        font-size: 1.4rem;
+        padding: 1.25rem 2rem;
+    }
+
+
+
+    &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        transition: all .4s;
+        border-radius: 1rem;
+        border: 2px solid $blue;
+
+    }
+
+    &:hover::before {
+        top: 0;
+        left: 0;
+        box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
+    }
+
+    &:active::before {
+        box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .3);
+    }
+
+    &:active {
+        background-color: darken($blue, 15%);
+    }
+}
+
+.button--a {
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.button--transparent {
+    background-color: $white;
+    color: $blue;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1.5rem 3rem;
+    border: 1px solid $blue;
+    outline: none;
+    position: relative;
+    transition: all .4s;
+
+    @include respond(1230) {
+        font-size: 1.2rem;
+    }
+
+    @include respond(1000) {
+        padding: 1.25rem 2rem;
+    }
+
+    &:hover {
+        box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .3);
+    }
+}

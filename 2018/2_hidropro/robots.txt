@@ -1,0 +1,7 @@
+User-Agent: *
+Dissallow: /node_modules/
+Dissallow: /views/post.ejs
+Dissallow: /app.js
+Dissallow: /.json
+
+sitemap: https://hidropro.ro/sitemap.xml

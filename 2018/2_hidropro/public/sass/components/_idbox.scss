@@ -1,0 +1,120 @@
+.idbox {
+
+    &__content {
+        font-size: 1.2rem;
+        color: $white;
+        width: 100%;
+        text-align: left;
+        padding: 5rem 0;
+        position: relative;
+
+        @include respond(768) {
+            font-size: 1rem;
+            padding: 3rem 0;
+        }
+
+        @include respond(500) {
+            font-size: .9rem;
+        }
+
+        &--width {
+            width: 70%;
+            margin-left: 10%;
+
+            @include respond(500) {
+                width: 90%;
+                
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 55%;
+        top: 0;
+        left: 0;
+        border-left: 3px solid $primary;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        // width: 100%;
+        height: 55%;
+        bottom: 0;
+        left: 100%;
+        border-left: 3px solid $primary;
+    }
+
+    &__box {          
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+
+        &__image {
+            height: 100%;
+        }
+
+    }
+
+    &__image {
+
+        &-1 {
+            width: 45%;
+            max-height: 50rem;
+            float: left;
+            padding:0 5rem 0rem 5rem;
+            margin: 0;
+
+            @include respond(768) {
+                width: 70%;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 3rem 0;
+                margin-bottom: 3rem;
+            }
+
+            @include respond(500) {
+                width: 90%;
+                margin: 0;
+            }
+        }
+
+        &-2 {
+            width: 45%;
+            max-height: 50rem;
+            float: right;
+            padding:0 5rem 0rem 5rem;
+
+            @include respond(768) {
+                width: 70%;
+              
+                position: relative;
+                right: 50%;
+                transform: translateX(50%);
+                padding: 3rem 0;
+            }
+
+            @include respond(500) {
+                width: 90%;
+            }
+        }
+    }
+}
+
+.box {
+
+    &__image {
+        margin-top: 5rem;
+        width: 100%;
+        min-height: 1rem;
+        position: relative;
+        left: 50%;
+        transform:  translateX(-50%);
+        overflow: hidden;
+    }
+}

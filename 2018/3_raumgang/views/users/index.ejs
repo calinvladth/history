@@ -1,0 +1,42 @@
+<% include ../partials/titles/users %>
+<% include ../partials/header %> 
+
+<div class="users">
+
+    <!-- <h1 class="users__home">
+        Clients Portofolio
+    </h1> -->
+
+    <div class="users__section">
+
+        <% users.forEach(function(user){ %>
+
+        <div class="users__box" id="<%= user.username %>">
+            <div class="users__boxy">
+
+                <div class="users__boxy--logo">
+                   <a href="/users/<%= user._id %>" class="users__link">
+                    <img src="<%= user.companyLogo %>" alt="" class="users__logo">
+                </a>
+                </div>
+
+            </div>
+            <a href="/users/<%= user._id %>">
+            <h3 class="users__name white">
+                <%= user.username %>
+            </h3>
+            </a>
+        </div> 
+  
+        <% }); %>
+        
+
+       
+    </div>
+
+                  
+        
+
+
+</div>
+<% include ../partials/footer-special %>

@@ -1,0 +1,56 @@
+.primary {
+    color: $primary;
+}
+
+.black {
+    color: black;
+}
+
+.dark-grey {
+    color: $dark-grey;
+}
+
+.blue {
+    color: $blue;
+}
+
+.letter-height {
+    transform: scale(.75, 1.1);
+    letter-spacing: .5rem;
+}
+
+.lowercase { 
+    text-transform: none;
+}
+
+.padding-top {
+    padding-top: 15rem;
+
+    @include respond(768) {
+        padding-top: 12.5rem;
+    }
+
+    @include respond(500) {
+        padding-top: 10rem;
+    }
+}
+
+.laptop--width {
+    width: 123rem;
+
+    @include respond(1000) {
+        width: 95%;
+    }
+}
+
+.margin-bottom {
+    margin-bottom: 60rem;
+}
+
+// #scale {
+    
+//     &:active {
+//         color: $primary;
+//         padding: 1.8rem 1.3rem;
+//     }
+// }

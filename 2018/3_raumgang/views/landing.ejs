@@ -1,0 +1,55 @@
+<% include partials/header-landing %>
+
+        <div class="landing">
+        <div class="width">
+            <div class="landing__logo ">
+                <img src="/img/logo.png" alt="" class="logo">
+            </div>
+        </div>
+
+        <div class="landing__gif">
+            <img src="https://static.matterport.com/mp_cms/media/filer_public/17/85/178583b3-6741-4e7a-b414-e01d674708c4/bd6b952a0bab656d0db4273942cd0710eadbf4ca.png" alt="" class="landing__gif--img">
+        </div>
+
+        <div class="landing__bar">
+            <form action="/login" class="landing__login width" method="POST">
+                <div class="input--details">
+                    <input type="text" name="username" class="landing__input" id="png" placeholder="Benutzername" required>
+                    <img src="/img/man.png" alt="" class="landing__input--details" >
+                </div>
+                <div class="input--details">
+                    <input type="password" name="password" class="landing__input" placeholder="Passwort" required>
+                    <img src="/img/eye.png" alt="" class="landing__input--details">
+                </div>
+
+                <!-- <a href="/forgot" class="forgot">Forgot password?</a> -->
+                
+                <div class="landing__buttons">
+                    <button class="button"focus>Login</button>
+                    <% if(currentUser && currentUser.isAdmin) { %>
+                        <a href="/register" class="button">Registrierung</a>
+                    <% } %> 
+                </div>
+
+                
+
+            </form>
+        </div>
+
+        <div class="landing__bar--bottom">
+            <!-- <div class="width">
+                <div class="landing__start">
+                    <a href="/users" class="landing__start--link">
+                        Start 
+                        <img src="/img/right.png" alt="" class="landing__start--arrow">
+                    </a href="#">
+                    
+                </div>
+                
+            </div> -->
+        </div>
+    
+        </div>
+
+    </body>
+    </html>

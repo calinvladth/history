@@ -1,0 +1,208 @@
+.hero {
+    height: calc(55rem + 10vh);  
+    position: relative;
+
+    @include respond (1000) {
+        height: 50rem;
+    }
+
+    @include respond(768) {
+        height: 45rem;
+    }
+
+    @include respond(500) {
+        height: 40rem;
+    }
+}
+
+.intro {
+    height: 30rem;
+    
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 11rem;
+
+    @include respond(1000) {
+       height: 30rem;
+       margin-bottom: 6rem;
+    }
+
+    @include respond(768) {
+        height: 25rem;
+    }
+
+    @include respond(500) {
+        height: 20rem;
+        margin-bottom: 0;
+    }
+
+    &__center {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        
+    }
+}
+
+.services {
+     
+    height: calc(55rem + 10vh); 
+    margin: 5rem auto;
+    position: relative;
+    box-shadow: 0 1.5rem 4rem rgba($black, .2); 
+    border-radius: 3px;
+
+    @include respond(1000) {
+        height: 50rem;
+    }
+
+    @include respond(500) {
+        margin: 0 auto;
+        height: 145rem;
+    }
+
+
+    &__center {
+        position: absolute;
+        width: 100%;
+        // height: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+.about {
+    // width: 123rem;
+    margin: 5rem auto;
+    
+    height: calc(35rem + 10vh); 
+    position: relative;
+    background-image: linear-gradient( 65deg, rgba($blue, .9) 0%, rgba($blue, .9) 50%, rgba($primary, .9) 50%, rgba($primary, .9) 60%),
+    url('../img/about.jpg') ;
+    background-size: cover;
+    background-position: center;
+    
+    @include respond(1000) {
+       height: 35rem;
+    }
+
+    @include respond(768) {
+        background-image: linear-gradient( 180deg, rgba($blue, .9) 0%, rgba($blue, .9) 50%, rgba($primary, .9) 50%, rgba($primary, .9) 60%),
+    url('../img/about.jpg') ;
+        height: 40rem;
+    }
+
+    @include respond(500) {
+        margin: 0 auto;
+        height: 45rem;
+    }
+
+    @include respond(375) {
+        height: 55rem;
+     }
+
+    
+    }
+
+.others {
+    // width: 123rem;
+
+    margin: 5rem auto;
+
+    @include respond(500) {
+        margin: 2.5rem auto;
+    }
+}
+
+.portofolio {
+    // margin-top: 8rem;
+    height: calc(35rem + 10vh);
+    position: relative;
+
+    @include respond(768) {
+        height: 25rem;
+        
+    }
+
+    @include respond(500) {
+        height: 50rem;
+    }
+    
+    &__center {
+        position: absolute;
+        width: 100%;
+        // height: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.form {
+    margin-top: 10rem;
+    height: calc(50rem + 10vh);
+    background-image:linear-gradient(rgba($primary, .75), rgba($primary, .75)), url('../img/muncitori.jpg');
+    position: relative;
+
+    @include respond(768) {
+        margin-top: 7rem;
+        height: 45rem;
+    }
+
+    @include respond(500) {
+        margin-top: 5rem;
+        height: 45rem;
+    }
+
+    &__center {
+        height: calc(42rem + 10vh);
+        // width: 123rem;
+        background-color: rgba($blue, .85);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include respond(768) {
+            height: 40rem;
+        }
+
+        @include respond(500) {
+            height: 37.5rem;
+        }
+
+        &--content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+    }
+}
+
+.footer {
+    height: calc(15rem + 10vh);
+    background-color: $dark-grey;
+    position: relative;
+
+    @include respond(768) {
+        height: 15rem;
+    }
+
+    
+
+    &__center {
+        position: absolute;
+        width: 100%;
+        // height: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+

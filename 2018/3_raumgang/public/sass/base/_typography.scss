@@ -1,0 +1,42 @@
+ body {
+    font-family: $font-1;  
+ }
+ 
+ a {
+     text-decoration: none;
+     font-style: inherit; 
+     color: inherit;
+     z-index: 500;
+     font-size: inherit;
+ }
+
+ ul, 
+ li {
+     list-style: none;
+ }
+
+ button {
+     font-style: inherit;
+ }
+
+ h1 {
+    // font-size: 3rem;
+    // color: $white;
+ }
+
+ h3 {
+    font-weight: normal;
+    // color: $white;
+    font-family: $font-2; 
+    font-size: inherit;
+}
+
+input, 
+textarea {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+// #textarea {
+//     white-space: pre-wrap;
+// }

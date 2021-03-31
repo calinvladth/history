@@ -1,0 +1,31 @@
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: 2px solid lighten($primary, 15%);
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: $white;
+    outline: none;
+    transition: all .4s;
+    
+    @include respond(1000) {
+        font-size: 1.2rem;
+    }
+
+    @include respond(768) {
+        font-size: 1rem;
+    }
+
+    &:hover {
+        border: 2px solid $darkish-grey;
+        color: $darkish-grey;
+        
+    }
+
+    &:active {
+        color: $blue;
+    }
+}

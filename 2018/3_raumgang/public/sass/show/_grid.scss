@@ -1,0 +1,84 @@
+.grid {
+     
+    min-height: calc(var(--vh, 1vh) * 100 - 0rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // @include respond(1700) {
+    //     min-height: calc(var(--vh, 1vh) * 100 - 4rem);
+    // }
+
+    &--white {
+        background-color: $white;
+    }
+}
+
+
+// Utillities
+
+// TEXT COLOR
+.dark {
+    color: $dark;
+    border-color: $dark; 
+}
+
+.white {
+    color: $white;
+    border-color: $white; 
+}
+
+.white-hover {
+    color: $white;
+    border-color: $white;
+    
+    &:hover {
+        color: $primary;
+        border-color: $primary;
+    }
+     
+}
+
+
+// BACKGROUNDCOLOR
+.backcolorwhitest {
+    background-color: $white;
+
+    &--small {
+        background-color: $white;
+
+        @include respond(900) {
+            background-color: $lightgrey;
+        }
+    }
+}
+
+
+
+.backcolorwhite {
+    background-color: $lightgrey; 
+} 
+
+
+.backcolorblack {
+    background-color: rgba(#000, .5);
+
+    &--small {
+        background-color: $dark;
+
+        @include respond(900) {
+            background-color: rgba(#000, .5);
+        }
+    }
+}
+
+//  HOVER
+.hover {
+    color: inherit;
+    border-color: inherit;
+
+    &:hover {
+        color: $primary;
+        border-color: $primary;
+    }
+}

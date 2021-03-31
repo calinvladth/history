@@ -1,0 +1,33 @@
+.social {
+    height: 10rem;
+    padding-right: 5%;
+    margin-top: 10rem;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    
+
+    &__link {
+        margin: 1rem;
+
+        
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__img {
+        height: 4rem;
+
+        @include respond(1230) {
+            height: 3.5rem;
+        }
+
+        @include respond(1000) {
+            height: 3rem;
+        }
+    }
+}

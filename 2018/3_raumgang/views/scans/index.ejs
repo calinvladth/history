@@ -1,0 +1,22 @@
+<% include ../partials/header %> 
+
+ <div class="container">
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% scans.forEach(function(scan){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= scan.logo %>" alt="image">
+                   <div class="caption">
+                       <h4><%= scan.name %></h4>
+                   </div>
+                   <p>
+                       <a href="/scans/<%= scan._id %>" class="btn btn-primary">More Info</a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>

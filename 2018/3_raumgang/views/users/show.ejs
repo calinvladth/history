@@ -1,0 +1,88 @@
+<% include ../partials/titles/userspage %>
+<% include ../partials/header %>
+<!-- <div class="container"> -->
+
+<div class="user__page">
+
+
+
+ 
+<div class="user__profile">
+
+<div class="user__profile--box">
+
+<div class="user__profile--avatar">
+    <img src="<%= user.companyLogo %>" alt="" class="user__avatar">
+</div>
+
+<h3 class="user__infos white">
+    <%= user.username %>
+</h3> 
+
+</div>
+<div class="user__infos--all">
+<a href="<%= user.websiteUrl %>" class=" user__infos--link">
+    <img src="/img/internet.png" alt="" class="user__infos--icon">
+    <p class="in"><%= user.websiteUrl %></p> 
+</a>
+
+<a href="mailto:<%= user.email %>" class=" user__infos--link">
+    <img src="/img/mail.png" alt="" class="user__infos--icon">
+    <p class="in"><%= user.email %></p>
+</a>
+
+<a class=" user__infos--link">
+        <img src="/img/home.png" alt="" class="user__infos--icon">
+        <p class="in"><%= user.companyName %></p>
+</a>
+</div>
+
+<div class="user__profile--buttons">
+<% if(currentUser && user._id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %> 
+
+<a href="/users/<%= user._id %>/edit" class="user__button user__button--edit">Bearbeiten</a>
+<!-- <a href="/logout" class="user__button">Logout</a> -->
+
+
+<% }%>
+
+<% if(currentUser && currentUser.isAdmin) { %>
+
+    <a href="/scans/new" class="user__button">Neuer Scan</a>
+
+<% } %>
+</div>
+
+</div>
+
+
+
+<div class="user__scans">
+
+    <% scans.forEach(function(scan) { %>   
+
+        <div class="user__box">
+            <div class="user__box--img">
+                <a href="/scans/<%= scan.id %>" class="user__box--play">
+                    <img src="/img/play-button.png" alt="" class="user__play"> 
+                </a>
+                <img src="<%= scan.propertyImage %>" alt="" class="user__image">
+            </div>
+            <h3 class="user__box--heading orange">
+                <%= scan.propertyName %>
+            </h3>
+        </div> 
+        
+    <% }); %>  
+
+</div>
+
+
+
+</div>
+    
+
+
+
+
+<% include ../partials/footer-special %>

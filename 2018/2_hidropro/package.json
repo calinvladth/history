@@ -1,0 +1,22 @@
+{
+  "name": "hidroizolatii",
+  "version": "1.0.0",
+  "description": "Hidroizolatii, servicii pentru constructii",
+  "main": "app.js",
+  "scripts": { 
+    "compile:sass": "node-sass public/sass/main.scss public/css/style.css -w",
+    "start": "node app.js"        
+  },
+  "author": "Calin Vlad && Andreea Drumariu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "live-server": "^1.2.0",
+    "mongod": "^2.0.0",
+    "mongoose": "^5.1.6",
+    "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.3"
+  }
+}

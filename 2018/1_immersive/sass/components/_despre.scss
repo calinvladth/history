@@ -1,0 +1,116 @@
+.despre {
+    background-color: $grey; 
+    height: 100vh;
+    padding: 0 10%; 
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    // @include respond(1400) {
+    //     height: 75rem;
+    // }
+
+    @include respond(1000) {
+        height: 100vh; 
+        }
+
+    // @include respond(768) {
+    //     padding: 0 5%;
+    //     height: 60rem;
+    // }
+
+    &__title {
+        font-size: 2.5rem;
+
+        @include respond(1000) {
+            font-size: 2rem;
+        }
+
+        @include respond(768) {
+            font-size: 2.25rem;
+        }
+    }
+
+    &__box--title {
+        line-height: 2.5rem;
+        padding: 2.5rem;
+        margin-bottom: 5rem;
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: ""; 
+            width: 65%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-bottom: 2px solid $primary;
+            border-top: 2px solid $primary;
+            transform: translateX(-50%); 
+            transition: all .4s;
+        }
+
+        &:hover::before {
+            width: 90%;
+        }
+    }
+
+    &__box {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+    &__content {
+        // background-color: red;
+        width: 33%;
+        margin: 2rem 0 0 0;
+        padding: 1.5rem;
+        
+
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+
+        &--img {
+            width: 22.5%;
+        }
+
+        &--title {
+            font-size: 1.4rem;
+            margin: 1rem 0 .75rem 0;
+
+            @include respond(1000) {
+                font-size: 1.2rem;
+                margin: .75rem 0 .5rem 0;
+            }
+
+            @include respond(768) {
+                font-size: 1.4rem;
+            }
+        }
+
+        &--paragraph {
+            width: 80%;
+            font-size: 1.2rem;
+            text-align: center;
+
+            @include respond(1000) {
+                font-size: 1.1rem;
+                width: 90%;
+            }
+
+            @include respond(768) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

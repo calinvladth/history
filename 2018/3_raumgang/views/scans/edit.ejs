@@ -1,0 +1,342 @@
+<% include ../partials/header %>
+
+        
+        
+            
+        
+                    
+                    <form class="form" action="/scans/<%= scan._id %>?_method=PUT" method="POST">
+
+                        <div class="form__box">
+
+                        <h1 class="form__box--name">Grundlegende Informationen für den Scan</h1>
+
+                        <h3 class="form__name">Projektname</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[propertyName]" value="<%= scan.propertyName %>">
+                        </div>
+        
+                        <h3 class="form__name">Projektbild für Profilseite</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[propertyImage]" value="<%= scan.propertyImage %>">
+                        </div>
+
+                        <h3 class="form__name">Erster benutzerdefinierter Bildname</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[propertyCustomName]" value="<%= scan.propertyCustomName %>">
+                        </div>
+        
+                        <h3 class="form__name">Erste Benutzerdefinierte Bildlink</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[propertyMap]" value="<%= scan.propertyMap %>">
+                        </div>
+
+                        <h3 class="form__name">Zweiter benutzerdefinierter Bildname</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[customImageName]" value="<%= scan.customImageName %>">
+                        </div>
+
+                        <h3 class="form__name">Zweiter benutzerdefinierter Bildlink</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[customImageLink]" value="<%= scan.customImageLink %>">
+                        </div>
+
+                        <h3 class="form__name">Erster benutzerdefinierter Pdf / Link-Name</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[customPdfName]" value="<%= scan.customPdfName %>">
+                        </div>
+
+                        <h3 class="form__name">Erstes PDF / Link</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[customPdfLink]" value="<%= scan.customPdfLink %>">
+                        </div>
+
+                        <h3 class="form__name">Zweiter benutzerdefinierter Pdf / Link-Name</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[customPdfName1]" value="<%= scan.customPdfName1 %>">
+                        </div>
+
+                        <h3 class="form__name">Zweites Pdf / Link</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[customPdfLink1]" value="<%= scan.customPdfLink1 %>">
+                        </div>
+        
+                        <h3 class="form__name">Firmenlogo</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[logo]" value="<%= scan.logo %>">
+                        </div>
+
+                        <h3 class="form__name">Schreiben Sie <i class="dark"> false</i> für dunkles Design oder
+                            <i class="dark">true</i> für helles Design!</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[isWhite]" value="<%= scan.isWhite %>">  
+                        </div>
+                        </div>
+                        <% if(currentUser.isAdmin){ %> 
+
+                            
+
+                                <div class="form__box">
+                                    <h1 class="fomr__box--name">Google Map / Street View</h1>
+                                <h3 class="form__name">Google Street View / Map</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[streetViewMap]" value="<%= scan.streetViewMap %>">
+                                </div>
+                                <h3 class="form__name">Google Street View; Fügen Sie hier die URL zur
+                                    Einbettung ein</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[streetView]" value="<%= scan.streetView %>">
+                                </div>
+
+                                <!-- <h3 class="form__name">Video</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[video]" value="<%= scan.video %>">
+                                </div> -->
+
+                                    <h1 class="fomr__box--name">Virtuelle Rundgänge</h1>
+                                <h3 class="form__name">Angezeigter Titel 1. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualName]" value="<%= scan.virtualName %>">
+                                </div>
+    
+                                <h3 class="form__name">Link 1. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLink]" value="<%= scan.virtualLink %>">
+                                </div>
+             
+                                <h3 class="form__name">Angezeigter Titel 2. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName1]" value="<%= scan.roomName1 %>">
+                                </div> 
+                                <h3 class="form__name">Link 2. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom1]" value="<%= scan.virtualLinkRoom1 %>">
+                                </div>
+                                <h3 class="form__name">Angezeigter Titel 3. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName2]" value="<%= scan.roomName2 %>">
+                                </div>
+                                <h3 class="form__name">Link 3. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom2]" value="<%= scan.virtualLinkRoom2 %>">
+                                </div>
+                
+                                <h3 class="form__name">Angezeigter Titel 4. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName3]" value="<%= scan.roomName3 %>">
+                                </div>
+                                <h3 class="form__name">Link 4. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom3]" value="<%= scan.virtualLinkRoom3 %>">
+                                </div>
+                
+                                <h3 class="form__name">Angezeigter Titel 5. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName4]" value="<%= scan.roomName4 %>">
+                                </div>
+                                <h3 class="form__name">Link 5. Rundgang</h3> 
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom4]" value="<%= scan.virtualLinkRoom4 %>">
+                                </div>
+                                <!-- EXTRA -->
+
+                                <h3 class="form__name">Angezeigter Titel 6. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName5]" value="<%= scan.roomName5 %>">
+                                </div> 
+                                <h3 class="form__name">Link 6. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom5]" value="<%= scan.virtualLinkRoom5 %>">
+                                </div>
+                                <h3 class="form__name">Angezeigter Titel 7. Rundgange</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName6]" value="<%= scan.roomName6 %>">
+                                </div>
+                                <h3 class="form__name">Link 7. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom6]" value="<%= scan.virtualLinkRoom6 %>">
+                                </div>
+                
+                                <h3 class="form__name">Angezeigter Titel 8. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName7]" value="<%= scan.roomName7 %>">
+                                </div>
+                                <h3 class="form__name">Link 8. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom7]" value="<%= scan.virtualLinkRoom7 %>">
+                                </div>
+                
+                                <h3 class="form__name">Angezeigter Titel 9. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName8]" value="<%= scan.roomName8 %>">
+                                </div>
+                                <h3 class="form__name">Link 9. Rundgang</h3> 
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom8]" value="<%= scan.virtualLinkRoom8 %>">
+                                </div>
+                                <h3 class="form__name">Angezeigter Titel 10. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName9]" value="<%= scan.roomName9 %>">
+                                </div> 
+                                <h3 class="form__name">Link 10. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom9]" value="<%= scan.virtualLinkRoom9 %>">
+                                </div>
+                                <h3 class="form__name">Angezeigter Titel 11. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName10]" value="<%= scan.roomName10 %>">
+                                </div>
+                                <h3 class="form__name">Link 11. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom10]" value="<%= scan.virtualLinkRoom10 %>">
+                                </div>
+                
+                                <h3 class="form__name">Angezeigter Titel 12. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName11]" value="<%= scan.roomName11 %>">
+                                </div>
+                                <h3 class="form__name">Link 12. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom11]" value="<%= scan.virtualLinkRoom11 %>">
+                                </div>
+                
+                                <h3 class="form__name">Angezeigter Titel 13. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName12]" value="<%= scan.roomName12 %>">
+                                </div>
+                                <h3 class="form__name">Link 13. Rundgang</h3> 
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom12]" value="<%= scan.virtualLinkRoom12 %>">
+                                </div>
+                                <h3 class="form__name">Angezeigter Titel 14. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName13]" value="<%= scan.roomName13 %>">
+                                </div>
+                                <h3 class="form__name">Link 14. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom13]" value="<%= scan.virtualLinkRoom13 %>">
+                                </div>
+                
+                                <h3 class="form__name">Angezeigter Titel 15. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName14]" value="<%= scan.roomName14 %>">
+                                </div>
+                                <h3 class="form__name">Link 15. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom14]" value="<%= scan.virtualLinkRoom14 %>">
+                                </div>
+                
+                                <h3 class="form__name">Angezeigter Titel 16. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName15]" value="<%= scan.roomName15 %>">
+                                </div>
+                                <h3 class="form__name">Link 16. Rundgang</h3> 
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom15]" value="<%= scan.virtualLinkRoom15 %>">
+                                </div>
+                                <h3 class="form__name">Angezeigter Titel 17. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName16]" value="<%= scan.roomName16 %>">
+                                </div>
+                                <h3 class="form__name">Link 17. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom16]" value="<%= scan.virtualLinkRoom16 %>">
+                                </div>
+                
+                                <h3 class="form__name">Angezeigter Titel 18. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName17]" value="<%= scan.roomName17 %>">
+                                </div>
+                                <h3 class="form__name">Link 18. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom17]" value="<%= scan.virtualLinkRoom17 %>">
+                                </div>
+                
+                                <h3 class="form__name">Angezeigter Titel 19. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName18]" value="<%= scan.roomName18 %>">
+                                </div>
+                                <h3 class="form__name">Link 19. Rundgang</h3> 
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom18]" value="<%= scan.virtualLinkRoom18 %>">
+                                </div>
+                                <h3 class="form__name">Angezeigter Titel 20. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[roomName19]" value="<%= scan.roomName19 %>">
+                                </div>
+                                <h3 class="form__name">Link 20. Rundgang</h3>
+                                <div class="form__group">
+                                    <input class="form__control" type="text" name="scan[virtualLinkRoom19]" value="<%= scan.virtualLinkRoom19 %>">
+                                </div>
+                
+                            </div>   
+                            
+                        <% }%>
+                            
+                           
+                        
+
+                        <div class="form__box">
+                            <h1 class="form__box--name">Social Media</h1>
+                        <h3 class="form__name">Website URL (Eingabe beginnend mit <i class="dark">http</i> oder <i class="dark">https</i> )</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[websiteUrl]" value="<%= scan.websiteUrl %>">
+                        </div>
+        
+                        <h1 class="form__box--name white">Facebook, Instagram, Linkedin und Twitter</h1>
+                        <!-- <h3 class="form__name">Social Platform Name 1 eg:("<i class="dark">instagram</i>")</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[socialName1]" value="<%= scan.socialName1 %>">
+                        </div> -->
+                        <h3 class="form__name">Facebook Link Beispiel:("https://www.facebook.com/username")</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[socialLink1]" value="<%= scan.socialLink1 %>">
+                        </div>
+                    
+                        <!-- <h3 class="form__name">Social Platform Name 2</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[socialName2]" value="<%= scan.socialName2 %>">
+                        </div> -->
+                        <h3 class="form__name">Instagram Link Beispiel:("https://www.instagram.com/username")</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[socialLink2]" value="<%= scan.socialLink2 %>">
+                        </div>
+        
+                        <!-- <h3 class="form__name">Social Platform Name 3</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[socialName3]" value="<%= scan.socialName3 %>">
+                        </div> -->
+                        <h3 class="form__name">Linkedin Link Beispiel:("https://www.linkedin.com/username")</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[socialLink3]" value="<%= scan.socialLink3 %>">
+                        </div>
+
+                        <h3 class="form__name">Twitter Link Beispiel:("https://www.twitter.com/username")</h3>
+                        <div class="form__group">
+                            <input class="form__control" type="text" name="scan[socialLink4]" value="<%= scan.socialLink4 %>">
+                        </div>
+                        </div>
+                        </div> 
+                        
+                        <h3 class="form__name" id="news">"News" (Geben Sie hier den Text ein)</h3>
+                        <textarea class="form__textarea" name="scan[news]" id="newsBox" cols="30" rows="10" wrap="hard" placeholder="<%= scan.news %>"><%= scan.news %></textarea>
+                    
+                        
+        
+                        <div class="form__group">
+          
+                                
+                                    <button class="form__button">Eingabe</button>
+                                
+                        </div>
+                    </form>
+                    
+                       <!-- <h1 class="form__placeholder">You have to go back</h1>  -->
+                    
+
+            <!-- <a class="form__exit" href="/users">Go Back</a> -->
+        </div>
+    </div>
+</div>
+<% include ../partials/footer %>
+

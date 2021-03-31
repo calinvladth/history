@@ -1,0 +1,20 @@
+
+Using mongodump at '/home/madmin/deploy/lib/src/mongodb-linux-x86_64-community-3.6.12/bin/mongodump' version '3.6.12 (community)'...
+Executing command: 
+/home/madmin/deploy/lib/src/mongodb-linux-x86_64-community-3.6.12/bin/mongodump --host localhost --port 59452 -u **** -p **** --authenticationDatabase admin --oplog --out /mnt/var/misc/backup_temp/backups/5e621f2b8a82445fbe411e1c/rs-ds159452_2020-03-06T100015.000Z
+2020-03-06T02:00:23.668-0800	writing config.system.indexes to 
+2020-03-06T02:00:23.668-0800	done dumping config.system.indexes (3 documents)
+2020-03-06T02:00:23.668-0800	writing admin.system.indexes to 
+2020-03-06T02:00:23.669-0800	done dumping admin.system.indexes (4 documents)
+2020-03-06T02:00:23.669-0800	writing admin.system.users to 
+2020-03-06T02:00:23.670-0800	done dumping admin.system.users (2 documents)
+2020-03-06T02:00:23.670-0800	writing admin.system.version to 
+2020-03-06T02:00:23.671-0800	done dumping admin.system.version (2 documents)
+2020-03-06T02:00:23.672-0800	writing raumgang.users to 
+2020-03-06T02:00:23.672-0800	writing raumgang.scans to 
+2020-03-06T02:00:23.672-0800	writing raumgang.objectlabs-system to 
+2020-03-06T02:00:23.674-0800	done dumping raumgang.users (6 documents)
+2020-03-06T02:00:23.675-0800	done dumping raumgang.scans (6 documents)
+2020-03-06T02:00:23.684-0800	done dumping raumgang.objectlabs-system (0 documents)
+2020-03-06T02:00:23.685-0800	writing captured oplog to 
+2020-03-06T02:00:34.828-0800		dumped 1 oplog entry

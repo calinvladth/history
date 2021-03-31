@@ -1,0 +1,139 @@
+.portofoliu {
+    background-color: inherit;
+    min-height: 70rem;
+    margin-top: 5rem;
+    // padding-bottom: 10rem;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // @include respond(1400) {
+    //     min-height: 50rem;
+    // }
+
+    // @include respond(1000) {
+    //     min-height: 60rem;
+    //     // margin-bottom: 10rem;
+    // }
+
+    &__bubble {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        // width: 20%;
+
+        @include respond(1000) {
+            height: 15rem;
+        
+        }
+        
+    }
+
+    &__title {
+        font-size: 2.5rem;
+   
+        
+
+        @include respond(1230) {
+            font-size: 2.25rem;
+        }
+
+        @include respond(1000) {
+            font-size: 2rem;
+        }
+
+        @include respond(768) {
+            font-size: 2.25rem;
+        }
+    }
+
+    &__box--title {
+        line-height: 2.5rem;
+        padding: 2.5rem;
+        // margin-top: 3rem;
+        margin-bottom: 10rem;
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: ""; 
+            width: 65%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-bottom: 2px solid $primary;
+            border-top: 2px solid $primary;
+            transform: translateX(-50%); 
+            transition: all .4s;
+        }
+
+        &:hover::before {
+            width: 90%;
+        }
+    }
+
+    &__box {
+        background-color: rgba(green, .4);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        &--content {
+            position: relative;
+            border: 1px solid $primary;
+            flex: 0 0 25%;
+
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+            transition: all .4s;
+            backface-visibility: hidden;
+
+            &:hover {
+                transform: scale(1.1);
+                z-index: 50;
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
+            }
+
+            &:hover > .portofoliu__content--title, 
+            &:hover > .portofoliu__content--play {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            
+        }
+    }
+
+    &__content {
+        &--img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &--title {
+            font-size: 1.4rem;
+            color: $white;
+            position: absolute;
+            top: 15%;
+            opacity: none;
+            visibility: hidden
+            
+        }
+
+        &--play {
+            font-size: 3.5rem;
+            position: absolute;
+            color: $primary;
+            opacity: none;
+            visibility: hidden
+        }
+    }
+}

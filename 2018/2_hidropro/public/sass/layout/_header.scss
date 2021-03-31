@@ -1,0 +1,263 @@
+.header {
+    width: 100%;
+    
+    @include respond(500) {
+        margin-top: 5rem;
+    }
+    
+    &__line {
+       
+        &--color {
+            height: 3rem;
+            width: 100%;
+            background-color: $primary;
+            position: relative;
+
+            @include respond(1000) {
+                height: 2.5rem;
+            }
+
+        }
+ 
+        &--paragraph {
+            display: inline;
+            float: right;
+            color: $black;
+            font-size: .9rem;
+            padding-right: 5rem;
+            position: relative;
+            top: 50%; 
+            transform: translateY(-50%);
+            
+            
+
+        }
+
+        &--i {
+            height: 1.5rem;
+            
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+            border-right: 1px solid rgba($black, .7);
+            padding-right: .5rem;
+            margin-right: 1rem;
+
+            @include respond(768) {
+                margin-right: 0;
+                border-right: none;
+                right: 5rem;
+            }
+
+            @include respond(375) {
+                right: 2.5rem;
+            }
+
+            &-2 {
+                @include respond(768) {
+                    right: 10rem;
+                }
+
+                @include respond(375) {
+                    right: 7.5rem;
+                }
+            }
+
+            &-3 {
+                @include respond(768) {
+                    right: 15rem;
+                }
+
+                @include respond(375) {
+                    right: 12.5rem;
+                }
+            }
+        }
+    }
+
+    &__menu {
+        height: 6rem;
+        width: 100%;
+       
+        // background-color: rgba(pink, .4);
+        position: relative;
+
+        @include respond(1000) {
+            height: 5rem;
+        }
+
+        @include respond(768) {
+            height: 4rem;
+        }
+
+        @include respond(500) {
+      
+        }
+    }
+
+ 
+
+    &__link {
+        display: inline-block;
+        float: right;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        margin: 0 2rem;
+        position: relative;
+        top: 50%; 
+        transform: translateY(-50%);
+        color: $white; 
+        transition: all .4s;
+
+        @include respond(1000) {
+            font-size: 1.2rem;
+        }
+
+        @include respond(768) {
+            font-size: 1rem;
+            margin: 0 1rem;
+        }
+
+        @include respond(500) {
+            font-size: .85rem;
+            margin: 0 .5rem;
+    
+        }
+
+       
+
+        &:first-child {
+            margin-right: 5rem;
+
+            @include respond(375) {
+                margin-right: 2.5rem;
+            }
+        }
+       
+    
+    
+        &:active,
+        &:hover  {
+            color: $white; 
+            transition: all .4s;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: .6rem;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-bottom: 2px solid $primary;
+            }
+           
+        }
+
+        &--active {  
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: .6rem;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-bottom: 2px solid $primary;
+            }
+        }
+}
+
+.logo {
+    position: relative;
+    top: 50%;
+    left: 17.5%;
+    transform: translateY(-50%);
+    height: 13rem;  
+
+    @include respond(1000) {
+        height: 11rem;
+        
+    }
+
+    @include respond(768) {
+        height: 90%;
+    }
+
+    @include respond(500) {
+        height: 5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__box {
+        width: 35rem;
+        height: 15rem;
+        background-color: $white;
+        clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        @include respond(1000) {
+            width: 32.5rem;
+            height: 12.5rem;
+        }
+
+        @include respond(768) {
+            width: 25rem;
+            height: 10rem;
+        }
+
+        @include respond(500) {
+            width: 100%;
+            clip-path: unset;
+            height: 5rem;
+        }
+
+    }
+}
+
+.slideleft {
+    @include respond(768) {
+        display: none;
+    }
+}
+
+
+
+#slideLeft {
+    opacity: 1;
+    overflow: hidden;
+    position: relative;
+    animation: slideLeft 1s;
+}
+
+// .slideleft {
+//     animation: slideLeft .4s 1;
+// }
+
+// .slideright {
+//     animation: slideRight .4s 1;
+// }
+
+@keyframes slideLeft {
+    0% {opacity: 0; right: 15rem }
+    25% {opacity: .05; right: 7.5rem }
+    50% {opacity: .15; right: 5rem }
+    75% {opacity: .25; right: 2.5rem }
+    100% {opacity: 1; right: 0; }
+}
+
+// @keyframes slideRight {
+//     0% {marginright: -10rem }
+//     25% {margin-right: -7.5rem }
+//     50% {margin-right: -5rem }
+//     75% {margin-right: -2.5rem }
+//     100% {margin-right: 0; }
+// }
+}

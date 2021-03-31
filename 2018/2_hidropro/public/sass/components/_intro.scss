@@ -1,0 +1,181 @@
+.intro {
+
+    &__break {
+        width: 1px;
+        height: 50rem;
+        background-color: $white;
+        position: absolute;
+        z-index: 100;
+        left: 49.3%;
+        top: -8.5rem;
+        transform: translateX(-49.3%) rotate(21.5deg);
+
+        @include respond(1000) {
+            display: none;
+        }
+    }
+
+    &__primary {
+        
+        height: 35rem;
+        // width: 115%;
+        // display: inline-block;
+        width:68rem;
+        background-image:linear-gradient(rgba($primary, .85), rgba($primary, .85)), url('../img/macarale.jpg');     
+        background-size: cover;   
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%); 
+        position: absolute;
+        top: -5rem;
+        left: 0;
+        
+        overflow: visible;
+
+        @include respond(1000) {       
+            height: 100%;  
+            width:  55%;
+        }
+
+    
+
+        // @include respond(768) {
+        //     height: 
+        // }
+
+        
+
+        &--heading {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-right: 15%;
+            text-transform: uppercase;
+            color: $white;
+            margin-bottom: 2rem;
+            text-align: left;
+            margin-left: 15%;
+
+            @include respond(1000) {
+                font-size: 1.5rem;
+            }
+
+            @include respond(768) {
+                font-size: 1.1rem;
+            }
+
+
+            @include respond(500) {
+                margin-bottom: 0.5rem;
+                font-size: 1rem;
+                padding: .5rem;
+                margin-left: 5%;
+            }
+        }
+
+        &--paragraph {
+            font-size: 1.5rem;
+            margin-left: 15%;
+            padding-bottom: .6rem;
+            padding-top: .8rem;
+            text-align: left;
+            color: $black;
+
+            @include respond(1000) {
+                font-size: 1.2rem;
+            }
+
+            @include respond(768) {
+                font-size: .9rem;
+            }
+
+            @include respond(500) {
+                padding: .5rem;
+                margin-left: 5%;
+                margin-right: 20%;
+            }
+
+        }
+    }
+
+    &__secondary {
+   
+        display: inline-block;
+        height: 35rem;
+        width: 68.7rem;
+        background-image: linear-gradient(to right bottom, $blue, $blue-second);
+        clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+
+        @include respond(1000) {         
+            height: 100%;
+            width:  55%;
+        }
+
+        &--heading {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-left: 15%;
+            text-transform: uppercase;
+            color: $white;
+            margin-bottom: 2rem;
+
+            @include respond(1000) {
+                font-size: 1.5rem;
+            }
+
+            @include respond(768) {
+                font-size: 1.1rem;
+            }
+
+
+            @include respond(500) {
+                margin-bottom: 0.5rem;
+                font-size: 1rem;
+                padding: .5rem;
+            }
+        }
+
+        &--paragraph {
+            font-size: 1.5rem;
+            margin-left: 15%;
+            position: relative;
+            padding-bottom: .8rem;
+            padding-top: 1rem;
+            color: $primary;
+
+            @include respond(1000) {
+                font-size: 1.2rem;
+            }
+
+            @include respond(768) {
+                font-size: 0.9rem;
+            }
+
+            @include respond(500) {
+                padding: .2rem;
+            }
+
+            &:after {
+                content: '';
+                width: 20%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                border-bottom: 2px solid $white;
+                transition: all .4s;
+            }
+
+            &:hover:after {
+                width: 40%;
+                
+            }
+        }
+    }
+
+
+
+}

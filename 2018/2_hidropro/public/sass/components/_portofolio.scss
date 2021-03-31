@@ -1,0 +1,48 @@
+.portofolio {
+    
+    &__title {
+        font-size: 2.5rem;
+        color: $white;
+        text-align: center;
+        margin-bottom: 8rem;
+
+        @include respond(1230) {
+            font-size: 2.2rem;
+            
+        }
+
+        @include respond(1000) {
+            font-size: 1.8rem;
+
+        }
+
+        @include respond(768) {
+            font-size: 1.5rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__paragraph {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: $white;
+        text-align: center;
+        line-height: 2.8rem;
+
+        @include respond(1230) {
+            font-size: 1.2rem;
+            
+        }
+
+        @include respond(1000) {
+            font-size: 1.1rem;
+            
+        }
+
+        @include respond(768) {
+            font-size: .8rem;
+            line-height: 2rem;
+            
+        }
+    }
+}

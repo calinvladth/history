@@ -1,0 +1,18 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="82.28mm" height="66.03mm" viewBox="0 0 233.24 187.18">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 111.57px;
+        font-family: KhmerMN, Khmer MN;
+      }
+    </style>
+  </defs>
+  <title>logo</title>
+  <g>
+    <text class="cls-1" transform="translate(0 95.17)">T</text>
+    <text class="cls-1" transform="translate(151.47 93.73)">O</text>
+    <polygon points="79.22 95.17 79.22 65.75 111.06 65.75 111.06 61.61 79.22 61.61 79.22 30.66 68.38 30.66 68.38 95.17 79.22 95.17"/>
+    <polygon points="155.9 34.81 155.9 30.66 111.06 30.66 111.06 95.17 155.9 95.17 155.9 91.03 121.91 91.03 121.91 76.76 121.91 62.05 121.91 57.91 121.91 49.98 121.91 34.81 155.9 34.81"/>
+    <rect x="111.06" y="60.85" width="33.24" height="4.14"/>
+  </g>
+</svg>

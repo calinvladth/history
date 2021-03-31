@@ -1,0 +1,33 @@
+@import '../../../assets/style/index'
+
+.box
+    width: 100%
+    position: relative
+
+    &:after
+        content: ''
+        position: absolute
+        top: -.1rem
+        left: 50%
+        transform: translateX(-50%)
+        width: 100vw
+        height: 100%
+        border-bottom: .1rem solid $dark_grey
+        z-index: 5
+
+.boxOptions
+    width: 100%
+    height: auto
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr))
+
+    > div
+        padding: 1rem 0
+        z-index: 10
+        cursor: pointer
+
+
+.optionActive
+    border-bottom: .3rem solid $orange
+    color: $orange
+

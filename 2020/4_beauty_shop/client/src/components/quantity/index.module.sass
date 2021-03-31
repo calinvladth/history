@@ -1,0 +1,33 @@
+@import '../../assets/style/index'
+
+
+.box
+    width: auto
+    height: auto
+
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    > div
+        border: .1rem solid $dark_grey
+        cursor: pointer
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &:nth-child(1)
+            border-right: none
+
+        &:nth-child(3)
+            border-left: none
+
+        > input
+            width: 100%
+            color: $black
+            padding: 0 .25rem
+            text-align: center
+
+
+

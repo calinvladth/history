@@ -1,0 +1,36 @@
+@import '../../assets/style/index'
+
+$padding: 1rem
+$size: 3.5rem
+$border_size: .1rem solid
+$border_color: $skin_dark
+
+.box
+    width: 100%
+    height: auto
+
+.search
+    background-color: transparent
+    border-radius: $radius
+    border: $border_size $border_color
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    > input
+        width: 100%
+        height: $size
+        padding: 0 $padding
+        color: $black
+
+        &::placeholder
+            color: darken($grey, 70%)
+
+    > div
+        width: $size
+        height: $size
+        padding: calc(#{$padding} / 1.5)
+
+.cancel
+    cursor: pointer

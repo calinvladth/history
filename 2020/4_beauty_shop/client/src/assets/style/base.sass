@@ -1,0 +1,60 @@
+@import "breakpoints"
+
+*,
+*::after,
+*::before
+    margin: 0
+    padding: 0
+    box-sizing: inherit
+
+html
+    font-size: 10px
+    font-family: $font
+    scroll-behavior: smooth
+
+body
+    font-weight: 400
+    box-sizing: border-box
+    background-color: $white
+    user-select: none
+
+span,
+textarea,
+input
+    font-family: $font
+
+// Typography
+
+a,
+a:link,
+a:active,
+a:hover
+    cursor: pointer
+    text-decoration: none
+    color: $black
+    z-index: 500
+
+
+h1, h2, h3, h4, h5, h6
+    font-size: 2rem
+    font-weight: 500
+
+p, span, li, a, button
+    font-size: 1.5rem
+    letter-spacing: .2rem
+
+
+button
+    cursor: pointer
+    outline: none
+    border: none
+
+    &:focus,
+    &::-moz-focus-inner
+        outline: none
+
+input
+    border: none
+    outline: none
+    background-color: transparent
+    font-size: 1.5rem

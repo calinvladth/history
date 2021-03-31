@@ -1,0 +1,64 @@
+@import '../../assets/style/index'
+
+$icon_size: 35px
+
+.presentationComponent
+    color: $black
+
+    @include lg
+        padding: 0 5%
+
+    &__paragraph
+        font-size: 15px
+
+        white-space: pre-line
+        margin-left: 50px
+
+    &__title1
+        margin-top: 50px
+        padding-bottom: 2px
+        font-size: 24px
+
+        @include md
+            font-size: 20px
+
+    &__title2
+        font-size: 20px
+
+        @include md
+            font-size: 18px
+
+    &__go_back
+        color: $neon_blue
+
+        width: $icon_size
+        height: $icon_size
+
+        display: flex
+
+        img
+            width: 100%
+
+    &__link
+        width: 100%
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__button
+
+        margin-top: 25px
+        border: none
+        outline: none
+        background: $neon_blue
+        width: 250px
+        height: 50px
+        border-radius: 25px
+
+        font-size: 16px
+
+        &:focus
+
+        &:active
+            outline: none

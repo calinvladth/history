@@ -1,0 +1,50 @@
+@import '../../assets/style/index'
+
+.box
+    background-color: rgba($dark_grey, .9)
+    min-height: 100vh
+    width: 100%
+
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    overflow: auto
+    z-index: 1000
+
+
+.boxContent
+    margin: 7.5rem auto
+    padding: 1rem
+    max-width: $max_width
+    height: auto
+    //min-height: 20rem
+    background-color: $white
+    border-radius: $radius
+
+    overflow-x: hidden
+
+
+    position: relative
+
+.boxClose
+    $size: 1.5rem
+    width: $size
+    height: $size
+
+    position: absolute
+    top: 1rem
+    right: 1.5rem
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    cursor: pointer
+
+.boxChildren
+    width: 80%
+    padding: 2rem 0
+    height: auto
+    margin: 0 auto

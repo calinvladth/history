@@ -1,0 +1,46 @@
+@import "../breakpoints"
+@import "../variables"
+// Font size is calculated in rem | 1rem = 10px
+
+$max-size: 35
+
+@for $i from 1 through $max-size
+
+    .f-#{$i}
+        font-size: calc(.1rem * #{$i})
+
+@include md
+    @for $i from 1 through $max-size
+        .f-md-#{$i}
+            font-size: calc(.1rem * #{$i})
+
+
+$max_letter_spacing_size: 10
+@for $i from 1 through $max-letter_spacing_size
+    .lts-#{$i}
+        letter-spacing: calc(.1rem * #{$i})
+
+.title
+    font-family: $font_title
+    font-weight: 400
+
+.capitalize
+    text-transform: capitalize
+
+.uppercase
+    text-transform: uppercase
+
+.normal
+    font-weight: 400
+
+.skin_dark
+    color: $skin_dark
+
+.skin
+    color: $skin
+
+.center
+    text-align: center
+
+.pointer
+    cursor: pointer

@@ -1,0 +1,15 @@
+@import '../../../../assets/style/index'
+
+.box
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.button
+    $width: 20rem
+    width: $width
+
+    @include md
+        width: 15rem
+        * > span
+            font-size: 1.25rem !important

@@ -1,0 +1,34 @@
+// Small devices
+
+// 1125 | lg
+// 700  | md
+// 600  | sm
+
+@mixin sm
+  @media (max-width: #{500px})
+    @content
+
+@mixin md
+  @media (max-width: #{760px})
+    @content
+
+@mixin lg
+  @media (max-width: #{1150px})
+    @content
+
+
+
+// Medium devices
+// @mixin md
+//    @media (min-width: #{$screen-md-min})
+//        @content
+
+// // Large devices
+// @mixin lg
+//    @media (max-width: #{1300px})
+//        @content
+
+// // Extra large devices
+// @mixin xl
+//    @media (min-width: #{$screen-xl-min})
+//        @content

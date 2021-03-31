@@ -1,0 +1,38 @@
+@import '../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+.boxTitle
+    margin-bottom: 2.5rem
+
+.grid
+    display: grid
+    grid-template-columns: auto 1fr
+    grid-gap: 1.5rem
+
+    > div
+
+        &:nth-child(1)
+            $size: 7.5rem
+            width: $size
+            height: $size
+            border-radius: 50%
+            overflow: hidden
+
+
+.reviewNameAndRating
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+.reviewRating
+    padding-bottom: .75rem
+    margin-left: 1.5rem
+
+.reviewDate
+    margin-top: -.5rem
+
+.reviewText
+    margin-top: 1rem

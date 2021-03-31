@@ -1,0 +1,58 @@
+@import '../../../../assets/style/index'
+
+$header_footer_size: 3rem
+
+.box
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-rows: $header_footer_size auto $header_footer_size
+
+    > div
+        color: $light_black
+
+        &:nth-child(1),
+        &:nth-child(3)
+            display: flex
+            justify-content: flex-start
+
+
+        &:nth-child(1)
+            align-items: flex-start
+
+        &:nth-child(3)
+            align-items: flex-end
+
+
+.boxLinks
+    padding: 2rem 0
+
+    $border: .1rem solid $light_black
+    border-top: $border
+    border-bottom: $border
+
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+
+    > span
+        margin-top: 1.75rem
+
+        &:nth-child(1)
+            margin-top: 0
+
+
+.boxLinkActive
+    > a
+        color: $orange
+
+.boxSignOut
+    &:hover
+        > span
+            color: $red
+
+
+
+

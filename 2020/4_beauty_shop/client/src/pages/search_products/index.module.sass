@@ -1,0 +1,80 @@
+@import '../../assets/style/index'
+
+$padding: 5rem
+
+.box
+    width: 100%
+    height: auto
+    background-color: $pink
+
+    position: fixed
+    top: 0
+    left: 0
+
+    z-index: 500
+
+
+.boxContent
+    width: $max_width
+    min-height: 60rem
+    height: 100vh
+
+    margin: 0 auto
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    position: relative
+
+.boxCancel
+    $size: 2rem
+    width: $size
+    height: $size
+    position: absolute
+    top: $size
+    right: $size
+    cursor: pointer
+
+.boxSearch
+    width: 80%
+    padding: calc(#{$padding} / 2) 0
+    background-color: $white
+    display: grid
+    grid-template-columns: auto 1fr auto
+
+    > div
+        height: 5rem
+        //border: .1rem solid black
+
+        display: flex
+        align-items: center
+
+.boxSearchTitle
+    justify-content: flex-start
+    padding: 0 $padding
+
+    border-right: .1rem solid $dark_grey
+
+.boxSearchInput
+    padding-left: calc(#{$padding} / 2)
+
+    > input
+        border: none
+
+.boxSearchIcon
+    justify-content: flex-end
+    padding: 0 $padding
+
+    > span
+        $size: 2.25rem
+        width: $size
+        height: $size
+
+.boxSearchIconActive
+    > span
+        cursor: pointer
+
+        > svg
+            fill: $orange
+            stroke-width: .5rem

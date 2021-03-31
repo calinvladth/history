@@ -1,0 +1,193 @@
+@import '../../../../assets/style/index'
+
+.contact
+    width: 100%
+    height: 100%
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    background-color: $black
+
+    &__content
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        position: relative
+
+        @include md
+            padding-bottom: 50px
+
+        @include sm
+            padding-bottom: 50px
+
+        &--color
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100px
+            height: 30%
+            background-color: $neon_blue
+
+            @include md
+                height: 10%
+
+        &--number
+            margin-left: 85%
+            margin-top: -40%
+
+        &--title
+        //background-color: red
+
+        &--form
+            width: 45%
+            height: auto
+
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: center
+
+            @include lg
+                width: 50%
+
+            @include md
+                width: 70%
+
+        &--buttons
+            width: 100%
+
+            display: flex
+            justify-content: center
+
+            @include lg
+                width: 50%
+                justify-content: space-between
+
+            @include md
+                width: 70%
+
+
+.contactTitle
+    font-size: 18px
+    font-weight: 400
+    color: $white
+
+.contactButton
+    cursor: pointer
+    font-size: 20px
+
+    width: 200px
+    height: 50px
+    border-radius: 250px
+    background-color: $white
+
+    margin: 0 25px
+
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+
+    position: relative
+
+    &:hover
+    &:active
+        background-color: darken($white, 20%)
+
+    &--inactive
+        background-color: darken($white, 20%)
+
+    @include lg
+        width: 45%
+        margin: 0
+        font-size: 18px
+
+    @include sm
+        font-size: 16px
+
+    &__img
+        position: absolute
+        top: 0
+        left: 0
+
+        width: 100%
+
+        z-index: 0
+
+        opacity: .4
+
+    &__name
+        z-index: 100
+        padding-top: 4%
+        color: $black
+        font-weight: 400
+
+
+.contactForm
+    border: none
+    outline: none
+    background-color: transparent
+    width: 100%
+    border-bottom: 2px solid $white
+    font-size: 17px
+    color: $white
+    padding: 5px 0 10px 0
+
+    @include sm
+        font-size: 16px
+
+    &::placeholder
+        color: rgba($white, .7)
+
+    &:focus
+        border: none
+
+    &__input
+        margin-bottom: 20px
+
+        &:nth-child(1)
+            margin-top: 50px
+
+    &__textarea
+        resize: vertical
+        margin-bottom: 40px
+
+.contactNumber
+    -webkit-text-stroke-width: 1.5px
+    -webkit-text-stroke-color: $white
+    color: transparent
+    position: absolute
+    font-size: 65px
+
+
+.contactLine6
+    position: absolute
+    top: -10px
+    right: 5%
+
+    width: 325px
+
+    @include md
+        width: 30%
+
+    @include sm
+        width: 45%
+
+.contactLine5
+    position: absolute
+    bottom: -10px
+    left: -5px
+    width: 275px
+
+    z-index: 1000
+
+    @include md
+        width: 25%
+
+    @include sm
+        width: 40%

@@ -1,0 +1,31 @@
+@import '../../../../../assets/style/index'
+@import '../common'
+.boxRow
+    display: grid
+    grid-template-columns: $grid_columns
+    height: auto
+
+
+    > div
+        display: flex
+        justify-content: center
+        align-items: center
+
+.boxItems
+    grid-column: 1 / 3
+    width: 100%
+    height: auto
+
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+
+.boxStatus
+    grid-column: 3
+    grid-row: 1
+    width: 100%
+    height: 100%
+
+    border-right: $table_border
+    border-bottom: $table_border

@@ -1,0 +1,88 @@
+@import '../../../assets/style/index'
+
+$size: 5rem
+$half_size: calc(#{$size} / 2)
+
+.box
+    width: 100%
+    height: auto
+
+    padding: 5rem 0
+
+.content
+    //padding-top: 5rem
+
+.table
+    margin-top: 5rem
+    width: 100%
+
+.tableTitle
+    > h1
+        font-size: 2.5rem
+        text-transform: uppercase
+
+.tableContent
+    width: 100%
+    height: auto
+    margin-top: 2.5rem
+
+.tableBanner
+    width: 100%
+    height: auto
+    padding: 1.5rem
+    border-radius: $radius
+
+    color: $white
+
+    margin: 2.5rem 0
+
+    > p
+        font-size: 1.5rem
+
+.day
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+.contentOptions
+    margin-top: 2.5rem
+
+.dayNumber
+    width: $size
+    height: $size
+
+    border: .1rem solid $black
+    border-radius: $radius
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+.dayOptions
+    margin-left: .5rem
+    height: 100%
+    cursor: pointer
+
+    > div
+        width: $half_size
+        height: $half_size
+        border: .1rem solid $black
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+
+        &:nth-child(1)
+            border-bottom: none
+            border-top-right-radius: $radius
+            border-top-left-radius: $radius
+
+        &:nth-child(2)
+            border-bottom-right-radius: $radius
+            border-bottom-left-radius: $radius
+
+        > p
+            font-size: 1.5rem
+

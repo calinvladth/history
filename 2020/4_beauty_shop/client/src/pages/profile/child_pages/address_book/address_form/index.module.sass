@@ -1,0 +1,83 @@
+@import '../../../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+.boxTitle
+    padding-bottom: .5rem
+    border-bottom: .1rem solid $black
+
+.form
+    width: 100%
+    height: auto
+
+    margin-top: 3.5rem
+
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-row: auto
+
+    grid-gap: 2rem
+
+    > div
+        margin-top: 1.5rem
+        height: auto
+
+        &:nth-child(1)
+            margin-top: 0
+
+.formCountry
+    grid-column: 1
+    grid-row: 1
+
+.formFirstName
+    grid-column: 1
+    grid-row: 2
+
+.formLastName
+    grid-column: 2
+    grid-row: 2
+
+.formPhoneNumber
+    grid-column: 1 / 3
+    grid-row: 3
+
+.formCity
+    grid-column: 1
+    grid-row: 4
+
+.formState
+    grid-column: 2
+    grid-row: 4
+
+.formStreet
+    grid-column: 1 / 3
+    grid-row: 5
+
+.formHouseNumber
+    grid-column: 1
+    grid-row: 6
+
+.formPostCode
+    grid-column: 2
+    grid-row: 6
+
+.formMakeDefault
+    grid-column: 2
+    grid-row: 7
+
+    display: flex
+    justify-content: flex-end
+    align-items: center
+
+.formAction
+    grid-column: 1 / 3
+    grid-row: 8
+
+    width: 100%
+    height: 100%
+
+    display: flex
+    justify-content: center
+    align-items: center

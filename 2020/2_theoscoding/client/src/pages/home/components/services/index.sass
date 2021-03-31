@@ -1,0 +1,179 @@
+@import '../../../../assets/style/index'
+
+$width_half: calc(#{$max_width} / 2)
+
+.services
+    width: 100%
+    min-height: 100vh
+    height: 600px
+
+    position: relative
+
+    background: linear-gradient(to right, $white 50%, $black 50%)
+
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+    @include md
+        padding: 25px 0
+        flex-direction: column
+        background: linear-gradient(to bottom, $white 50%, $black 50%)
+
+
+    &__left
+        //grid-column: 1
+        background-color: $white
+
+    &__leftcontent
+        width: $width_half
+        height: 100%
+        background-color: $white
+
+        display: flex
+        justify-content: flex-end
+        align-items: center
+
+        position: relative
+
+        @include md
+            padding: 50px 0
+
+        &--number
+            position: absolute
+            top: 7%
+            right: 15%
+
+            @include lg
+                right: 20%
+
+            @include md
+                right: 30%
+
+            @include sm
+                top: 10%
+
+
+        &--text
+            height: 40%
+            width: 100%
+
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+
+    &__rightcontent
+        width: $width_half
+        height: 100%
+        background-color: $black
+
+
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        position: relative
+
+        @include md
+            padding: 50px 0
+
+        &--text
+            height: 40%
+            width: 100%
+
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+
+        &--button
+            position: absolute
+            top: 75%
+            left: 50%
+            transform: translateX(-50%)
+
+
+    &__right
+        background-color: $black
+
+        position: relative
+
+.servicesTitle
+    font-size: 22px
+    margin-bottom: 50px
+    color: $black
+
+    &--light
+        color: $white
+
+    @include lg
+        font-size: 22px
+
+    @include md
+        font-size: 18px
+
+    @include sm
+        margin-bottom: 25px
+
+.servicesSubtitle
+    font-size: 16px
+    color: $black
+
+    &--light
+        color: $white
+
+    @include lg
+        font-size: 16px
+
+    @include md
+        font-size: 15px
+
+
+.servicesNumber
+    -webkit-text-stroke-width: 1.5px
+    -webkit-text-stroke-color: $black
+    color: transparent
+    position: absolute
+    font-size: 65px
+
+    top: 0
+    left: 0
+
+
+.servicesTitleAnimationBox
+    position: absolute
+    top: 2%
+    right: 0
+    width: 40%
+
+    border-bottom: 1px solid $neon_blue
+
+    z-index: 1000
+
+    @include sm
+        top: 0
+        width: 50%
+        border-color: 2px solid $black
+
+
+.servicesTitleAnimation
+    color: $neon_blue
+    font-size: 45px
+    font-weight: 700
+    letter-spacing: 12px
+
+    @include lg
+        font-size: 30px
+
+    @include md
+        font-size: 25px
+        letter-spacing: 6px
+
+    @include sm
+
+
+

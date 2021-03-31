@@ -1,0 +1,4 @@
+module.exports = {
+    PERSONAL_INFO: 'PERSONAL_INFO',
+    PERSONAL_INFO_PUT: 'PERSONAL_INFO_PUT'
+}

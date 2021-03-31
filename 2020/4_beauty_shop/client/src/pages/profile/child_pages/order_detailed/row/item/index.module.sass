@@ -1,0 +1,50 @@
+@import '../../../../../../assets/style/index'
+@import '../../common'
+
+.box
+    width: 100%
+    height: auto
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+
+    > div
+        width: 100%
+        height: auto
+        border-right: $table_border
+        border-bottom: $table_border
+        padding: 1.25rem 0
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &:nth-child(1)
+            border-left: $table_border
+
+.boxDetail
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+
+.boxImage
+    $size: 10rem
+    width: $size
+    height: $size
+    background-color: $grey
+    margin-right: 1.5rem
+
+    padding: .75rem
+
+    display: flex
+
+    > img
+        margin: auto
+        max-width: 100%
+        max-height: 100%
+
+.boxInfo
+    > p
+        &:nth-child(1)
+            margin-bottom: .5rem
+

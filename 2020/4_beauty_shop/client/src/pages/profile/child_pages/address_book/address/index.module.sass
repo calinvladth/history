@@ -1,0 +1,57 @@
+@import '../../../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+
+.boxTop
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    > span
+        margin-left: 1.5rem
+
+        &:nth-child(1)
+            margin-left: 0
+
+.boxBottom
+    margin-top: 1.5rem
+    width: 100%
+    color: $dark_grey
+
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    align-items: center
+
+    > span
+        margin-top: .5rem
+        margin-left: 1.5rem
+
+        width: calc(50% - 1.5rem)
+
+        &:nth-child(odd)
+            margin-left: 0
+
+.boxAction
+    width: 100%
+    margin-top: 2rem
+    color: $dark_grey
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    > div
+        &:nth-child(2)
+            > span
+                margin-right: 1.5rem
+
+                &:nth-last-child(1)
+                    margin-right: 0
+
+
+.boxDefault
+    background-color: $skin_dark

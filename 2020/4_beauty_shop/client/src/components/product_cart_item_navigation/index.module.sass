@@ -1,0 +1,44 @@
+@import '../../assets/style/index'
+
+$image_size: 7.5rem
+
+.box
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-columns: $image_size 1fr
+    grid-gap: .75rem
+
+    > div
+        &:nth-child(1)
+            width: 100%
+            height: $image_size
+
+            background-color: $light_grey
+            position: relative
+
+            > img
+                max-width: 100%
+                max-height: 100%
+
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+
+                margin: auto
+
+
+
+        &:nth-child(2)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: flex-start
+
+            > div > p
+                margin-top: .5rem
+                &:nth-child(1)
+                    margin-top: 0

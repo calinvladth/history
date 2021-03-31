@@ -1,0 +1,67 @@
+@import "../../assets/style/index"
+
+$side_margin: 2rem
+
+.box
+    width: 100%
+    min-height: 600px
+    padding: 5rem 0
+
+.hero
+    padding: 2.5rem 0
+
+
+.boxContent
+    width: 100%
+    padding: 5rem 0
+    margin: 0 auto
+
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+    @include md
+        flex-direction: column
+
+
+.content
+    width: calc(70% - #{$side_margin})
+    height: auto
+
+    @include md
+        order: 2
+        width: 100%
+
+.post
+    padding-top: 2.5rem
+
+
+    &:nth-child(1)
+        padding-top: 0
+
+.side
+    position: sticky
+    top: $side_margin
+    right: 0
+
+    width: calc(30% - #{$side_margin})
+    height: auto
+
+    @include md
+        width: 100%
+        position: initial
+        padding-bottom: 2.5rem
+
+.backToTop
+    width: 100%
+    margin-top: 2.5rem
+
+    @include md
+        display: none
+
+.bmac
+    width: 100%
+    margin-top: 2.5rem
+
+    @include md
+        display: none

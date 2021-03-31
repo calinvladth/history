@@ -1,0 +1,83 @@
+@import '../../../../assets/style/index'
+
+.box
+    width: 100%
+    display: flex
+    justify-content: flex-start
+
+.thumbnail
+    // 4 / 3 = 0.75
+    // 16 / 9 = 0.5625
+    $aspect_ratio: 0.5625
+    $width: 15rem
+    min-width: $width
+    max-width: $width
+    height: calc(#{$aspect_ratio} * #{$width})
+    border-radius: $radius
+    overflow: hidden
+
+    //@include sm
+    //    $width: 10rem
+    //    min-width: $width
+    //    max-width: $width
+    //    height: calc(#{$aspect_ratio} * #{$width})
+
+.thumbnailImage
+    width: 100%
+    height: 100%
+    background-color: $grey
+
+.content
+    width: 100%
+    padding-left: 2.5rem
+
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.title
+    margin-bottom: 2rem
+
+    display: flex
+    flex-direction: column
+
+    > div
+        height: 2rem
+        margin-top: .5rem
+        background-color: $grey
+        &:nth-child(1)
+            width: 60%
+            margin-top: 0
+        &:nth-child(2)
+            width: 80%
+            align-self: center
+        &:nth-child(3)
+            width: 40%
+
+.action
+    width: 100%
+    height: 4rem
+
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    @include sm
+        display: none
+
+    > div
+        width: 20rem
+        background-color: lighten($grey, 2%)
+        height: 4rem
+
+
+.meta
+    margin-top: 2rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    > div
+        width: 15%
+        height: 1rem
+        background-color: darken($grey, 7%)

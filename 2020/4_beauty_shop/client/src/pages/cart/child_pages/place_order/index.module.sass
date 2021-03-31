@@ -1,0 +1,28 @@
+@import '../../../../assets/style/index'
+
+$grid_gap: 2rem
+
+.box
+    display: grid
+    grid-template-columns: 55% 1fr
+
+    grid-gap: $grid_gap
+
+    > div
+        width: 100%
+
+        &:nth-child(2)
+            height: auto
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+
+            > div
+                width: 100%
+                height: auto
+
+                margin-top: $grid_gap
+
+                &:nth-child(1)
+                    margin-top: 0

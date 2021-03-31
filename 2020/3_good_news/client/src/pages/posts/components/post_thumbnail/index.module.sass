@@ -1,0 +1,65 @@
+@import '../../../../assets/style/index'
+
+.box
+    width: 100%
+    display: flex
+    justify-content: flex-start
+
+.thumbnail
+    // 4 / 3 = 0.75
+    // 16 / 9 = 0.5625
+    $aspect_ratio: 0.5625
+    $width: 15rem
+    min-width: $width
+    max-width: $width
+    height: calc(#{$aspect_ratio} * #{$width})
+    border-radius: $radius
+    overflow: hidden
+
+    //@include sm
+    //    $width: 15rem
+    //    min-width: $width
+    //    max-width: $width
+    //    height: calc(#{$aspect_ratio} * #{$width})
+
+.thumbnailImage
+    width: 100%
+    height: 100%
+    background-color: $grey
+
+.content
+    width: 100%
+    padding-left: 2.5rem
+
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.title
+    font-size: 2rem
+    margin-bottom: 2rem
+    margin-top: -.6rem
+    text-transform: uppercase
+
+    @include sm
+        font-size: 1.75rem
+
+
+.action
+    width: 100%
+
+.meta
+    width: 100%
+    margin-top: 2rem
+
+.desktop
+    @include md
+        display: none
+
+.phone
+    display: none
+    @include md
+        padding-top: 3rem
+        display: flex
+        flex-direction: column
+        justify-content: space-between

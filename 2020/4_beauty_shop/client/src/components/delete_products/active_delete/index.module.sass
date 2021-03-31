@@ -1,0 +1,31 @@
+@import "../../../assets/style/index"
+
+.box
+    color: $light_black
+    fill: $light_black
+
+    display: flex
+    align-items: center
+
+    > div
+        display: flex
+        align-items: center
+
+        margin-left: 1rem
+
+        &:nth-child(1)
+            margin-left: 0
+
+.cancel
+    &:hover
+        color: $orange
+
+.selectAll
+    > p
+        margin-left: .5rem
+
+.icon
+    padding-left: 1rem
+
+    &:hover
+        fill: $red

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1001,
+    "project": "Personal Finance",
+    "image": "https://xxx.com",
+    "short_description": "This project is an MVP for a 3D gallery presentation. \n ",
+    "link": "https://finance.theoscoding.com/",
+    "technologies": {
+      "front": "React",
+      "back": "Django",
+      "db": "SQLite",
+      "ssl": "LetsEncrypt",
+      "virtual_machine": "Ubuntu 18.4",
+      "reverse_proxy": "Nginx"
+    }
+  },
+  {
+    "id": 1002,
+    "project": "Vr Station",
+    "image": "https://xxx.com",
+    "short_description": "This project is an MVP for a 3D gallery presentation. \n The users are able to have access on galleries from their home comfort. \n The presentations have VR glasses support. \n Access key:  xxxxxxxxxxxx",
+    "link": "https://vr.theoscoding.com/",
+    "technologies": {
+      "front": "React",
+      "back": "Django",
+      "db": "SQLite",
+      "ssl": "LetsEncrypt",
+      "virtual_machine": "Ubuntu 18.4",
+      "reverse_proxy": "Nginx"
+    }
+  }
+]

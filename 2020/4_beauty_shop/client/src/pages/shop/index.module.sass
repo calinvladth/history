@@ -1,0 +1,41 @@
+@import '../../assets/style/index'
+
+
+.box
+    width: 100%
+    height: auto
+
+
+.grid
+    margin: 5rem 0
+    display: grid
+    grid-template-columns: 27.5% 72.5%
+    grid-template-rows: 1fr
+
+    grid-gap: 2rem
+
+
+    > div
+
+        &:nth-child(1)
+            grid-column: 1
+            grid-row: 1
+
+        &:nth-child(2)
+            grid-column: 2
+            grid-row: 1
+
+
+.boxFilters
+    width: 100%
+    height: auto
+
+    > section
+        margin-top: 3rem
+
+        &:nth-child(1)
+            margin-top: 0
+
+.boxProducts
+    width: 100%
+    height: auto

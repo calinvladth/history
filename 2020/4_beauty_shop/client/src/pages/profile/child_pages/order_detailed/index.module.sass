@@ -1,0 +1,23 @@
+@import '../../../../assets/style/index'
+
+.box
+    width: 100%
+    height: 100%
+
+    > section
+        margin-top: 2.5rem
+
+        &:nth-child(1)
+            margin-top: 0
+
+.boxHeader
+    height: 5rem
+    background-color: $grey
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+
+    > div
+        display: flex
+        justify-content: center
+        align-items: center
+

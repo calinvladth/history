@@ -1,0 +1,98 @@
+@import '../../assets/style/index'
+$padding: 1rem
+$size: 3.5rem
+$border_size: .1rem solid
+$font_weight_active: 400
+
+.select
+    width: 100%
+    min-height: $size
+    max-height: $size
+    cursor: pointer
+    position: relative
+
+    z-index: 100
+
+
+.selected
+    width: 100%
+    height: 100%
+    background-color: transparent
+    padding-left: $padding
+    border-radius: $radius
+    border: $border_size
+
+
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    > p
+        color: $black
+
+        > span
+            color: $black
+            font-weight: $font_weight_active
+
+    > div
+        width: $size
+        height: $size
+        padding: calc(#{$padding} * 1.25)
+
+.options
+    width: 100%
+    height: 0
+    overflow: hidden
+
+    background-color: $white
+
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 100
+
+    > div
+        width: 100%
+        height: $size
+        background-color: transparent
+        border-bottom: $border_size
+        border-left: $border_size
+        border-right: $border_size
+        border-color: inherit
+        padding: 0 $padding
+
+        display: flex
+        align-items: center
+        justify-content: flex-start
+
+
+        &:nth-last-child(1)
+            border-bottom-left-radius: $radius
+            border-bottom-right-radius: $radius
+
+        &:hover
+            background-color: darken($grey, 10%)
+
+.select:hover
+    .selected
+        border-bottom-left-radius: 0
+        border-bottom-right-radius: 0
+
+        > div
+            transform: rotate(180deg)
+            padding-top: calc(#{$padding} * 0.75)
+
+    .options
+        height: auto
+        overflow: visible
+        position: relative
+        z-index: 2000
+
+.borderSkinDark
+    border-color: $skin_dark
+
+.borderDarkGrey
+    border-color: $dark_grey
+
+.active
+    font-weight: $font_weight_active

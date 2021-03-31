@@ -1,0 +1,29 @@
+@import '../../../assets/style/index'
+
+.icons
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 2rem
+
+    > div
+        $size: 2.5rem
+        width: auto
+        height: $size
+
+        display: flex
+        align-items: center
+
+
+        > span
+            width: $size
+            height: $size
+            cursor: pointer
+
+            &:hover
+                fill: $orange
+
+.iconActive
+    fill: $orange

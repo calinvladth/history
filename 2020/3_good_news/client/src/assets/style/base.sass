@@ -1,0 +1,52 @@
+@import breakpoints
+*,
+*::after,
+*::before
+    margin: 0
+    padding: 0
+    box-sizing: inherit
+
+html
+    font-size: 10px
+    font-family: $font
+    scroll-behavior: smooth
+
+    @include lg
+        font-size: 8px
+
+body
+    font-weight: 400
+    box-sizing: border-box
+    background-color: $grey
+
+span,
+textarea,
+input
+    font-family: $font
+
+// Typography
+
+a,
+a:link,
+a:active,
+a:hover
+    cursor: pointer
+    text-decoration: none
+    color: $black
+    z-index: 500
+
+button
+    cursor: pointer
+    outline: none
+    border: none
+
+    &:focus,
+    &::-moz-focus-inner
+        outline: none
+
+input
+    font-family: $font
+    border: none
+    outline: none
+    background-color: transparent
+    font-size: 1.5rem

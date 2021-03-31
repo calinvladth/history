@@ -1,0 +1,42 @@
+@import '../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+    position: relative
+
+    > span
+        z-index: 50
+        cursor: pointer
+
+    &:hover
+        > .boxDelete
+            opacity: 1
+            visibility: visible
+
+.boxCheck
+    $margin: 1rem
+
+    position: absolute
+    top: $margin
+    left: $margin
+
+.boxDelete
+    $size: 1.75rem
+    width: $size
+    height: $size
+
+    fill: $light_black
+
+    opacity: 0
+    visibility: hidden
+
+    position: absolute
+    bottom: 17%
+    right: 0
+
+    &:hover
+        > svg
+            fill: red
+

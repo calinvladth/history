@@ -1,0 +1,29 @@
+@import '../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+    > .boxLinks
+        &:nth-child(3)
+            margin-top: 4rem
+
+
+.boxLinks
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+
+    > a
+        margin-top: 1rem
+
+        &:nth-child(1)
+            margin-top: 0
+
+
+.active
+    color: $orange
+
+.boxTitle
+    margin-bottom: 1rem

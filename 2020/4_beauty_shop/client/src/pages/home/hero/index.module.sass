@@ -1,0 +1,58 @@
+@import '../../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+.grid
+    height: 90vh
+    min-height: 60rem
+    max-height: 80rem
+    display: grid
+    grid-template-columns: 62.5% 37.5%
+    grid-template-rows: 1fr
+
+    > div
+        display: grid
+
+        &:nth-child(1) // Left side
+            grid-template-columns: 45% 55%
+            grid-template-rows: repeat(2, 1fr)
+
+        &:nth-child(2)
+            grid-template-columns: 30% 60% 10%
+            grid-template-rows: 1fr
+
+
+.boxTitle
+    grid-column: 1 / 3
+    grid-row: 1
+
+    display: flex
+    align-items: flex-end
+    padding-bottom: 2.5rem
+
+.boxActions
+    grid-column: 1
+    grid-row: 2
+
+.boxProduct
+    grid-column: 2
+    grid-row: 2
+
+.boxImage
+    grid-column: 1 / 3
+    grid-row: 1
+
+    position: relative
+    z-index: 10
+    margin: 2.5rem 0 2.5rem 1rem
+
+
+
+.boxLine
+    grid-column: 2 / 4
+    grid-row: 1
+    border: .3rem solid $skin_dark
+    position: relative
+    z-index: 0
